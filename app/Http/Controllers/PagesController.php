@@ -23,15 +23,21 @@ class PagesController extends Controller
         return view('pages.about-us',compact('title'));
     }
 
-    public function servizi()
+    public function filtrisocial()
     {
-        $title='Servizi';
-        return view('pages.servizi',compact('title'));
+        $title='Filtri Social';
+        return view('pages.filtri-social',compact('title'));
     }
 
     public function contatti()
     {
         $title='Contatti';
+        return view('pages.contatti',compact('title'));
+    }
+
+    public function inviomail()
+    {
+        $title='Invio Mail';
         return view('pages.contatti',compact('title'));
     }
 

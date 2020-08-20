@@ -73,6 +73,7 @@
 		<script src="{{url('/assets/js/plugins.js')}}"></script>
 		<script src="assets/js/footer-reveal.js"></script>
 		<script src="assets/js/main.js"></script>
-		<script src="assets/js/footer-reveal_init.js"></script>
+        <script src="assets/js/footer-reveal_init.js"></script>
+        @stack('script')
 	</body>
 </html>

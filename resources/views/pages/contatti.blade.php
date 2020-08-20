@@ -3,29 +3,35 @@
 @section('content')
 
 <main class="js-animsition-overlay" data-animsition-overlay="true">
-    <!-- pos-rel start -->
-    <section id="up" class="pos-rel js-parallax-bg" style="background-image:url(assets/images/backgrounds/kal-visuals--UG2O1U2EfY-unsplash.jpg)">
+
+
+    <section id="up" class=" pos-rel anim-lines bg-img-cover" style="background-image:url(assets/images/projects/odonkor/red-haired-woman-wearing-black-lace-choker-2998400.jpg)">
         <!-- bg-overlay -->
         <div class="bg-overlay-black"></div>
-        <!-- pos-rel start -->
-        <div class="pos-rel flex-min-height-100vh">
-            <div class="padding-top-bottom-120 container small after-preloader-anim">
+        <!-- lines-container start -->
+        <div class="lines-container pos-rel anim-lines flex-min-height-100vh border-box-bottom">
+            <div class="padding-top-bottom-120 container">
                 <!-- title start -->
-                <h2 class="headline-xl">
+                <h2 class="headline-xl after-preloader-anim">
                     <span class="hidden-box d-block">
-                        <span class="anim-slide">The Best</span>
+                        <span class="anim-slide">We Generate</span>
                     </span>
                     <span class="hidden-box d-block">
-                        <span class="anim-slide tr-delay-01">Agency for</span>
+                        <span class="anim-slide tr-delay-01">
+                            <span class="text-color-red">Creative</span> &
+                        </span>
                     </span>
                     <span class="hidden-box d-block">
-                        <span class="anim-slide tr-delay-02">Your Businnes</span>
+                        <span class="anim-slide tr-delay-02">
+                            Novation <span class="text-color-red">Ideas</span>
+                        </span>
                     </span>
                 </h2><!-- title end -->
-                <p class="subhead-xs text-color-dadada margin-top-20 anim-fade tr-delay-04">Tote bag cornhole pork belly swag vexillologist godard.</p>
             </div>
-        </div><!-- pos-rel end -->
-    </section><!-- pos-rel end -->
+        </div><!-- lines-container end -->
+        <!-- particles -->
+        <div id="js-particles"></div>
+    </section><!-- page head end -->
 
     <!-- contact us start -->
     <section id="down" class="pos-rel section-bg-dark-1">
@@ -36,10 +42,12 @@
                 <!-- content start -->
                 <div class="js-scrollanim">
                     <h2 class="headline-l">
-                        <span class="anim-text-double-fill" data-text="Contact">Contact</span>
-                        <span class="anim-text-double-fill tr-delay-02" data-text="Us">Us</span>
+                        <span class="anim-text-double-fill" data-text="I nostri">I nostri</span>
+                        <span class="anim-text-double-fill tr-delay-02" data-text="contatti">contatti</span>
                     </h2>
-                    <p class="body-text-s margin-top-20 anim-text-reveal tr-delay-04">Pitchfork vaporware hella, vice next level art party subway tile swag portland. Cliche authentic photo booth, seitan sartorial iPhone brooklyn bicycle rights whatever small batch selvage affogato yuccie adaptogen vinyl. Sartorial franzen tacos cardigan, offal gluten-free pour-over snackwave plaid four dollar toast.</p>
+                    <p class="body-text-s margin-top-20 anim-text-reveal tr-delay-04">Un responsabile marketing vi contatterà subito!
+
+                    </p>
                 </div><!-- content end -->
 
                 <!-- flex-container start -->
@@ -47,7 +55,7 @@
                     <!-- column start -->
                     <div class="four-columns column-50-100 padding-top-60">
                         <div class="column-r-margin-20 js-scrollanim">
-                            <p class="headline-xxxxs anim-text-double-fill invert" data-text="Email us">Email us</p>
+                            <p class="headline-xxxxs anim-text-double-fill invert" data-text="Email us">Email</p>
                             <div class="padding-top-20">
                                 <h6 class="anim-fade tr-delay-01">
                                     <a href="#" class="subhead-xxs text-color-dadada text-hover-to-red js-pointer-small">email@umaya.com</a>
@@ -65,26 +73,26 @@
                     <!-- column start -->
                     <div class="four-columns column-50-100 padding-top-60">
                         <div class="column-r-margin-20 js-scrollanim">
-                            <p class="headline-xxxxs anim-text-double-fill invert" data-text="Visit us">Visit us</p>
+                            <p class="headline-xxxxs anim-text-double-fill invert" data-text="Indirizzo">Indirizzo</p>
                             <h6 class="list list_margin-1px padding-top-20 text-color-b0b0b0">
-                                <span class="list__item">
+                                {{-- <span class="list__item">
                                     <span class="d-inline-block hidden-box">
                                         <span class="subhead-xxs anim-reveal tr-delay-01">PO Box 223158</span>
                                     </span>
-                                </span>
+                                </span> --}}
                                 <span class="list__item">
                                     <span class="d-inline-block hidden-box">
-                                        <span class="subhead-xxs anim-reveal tr-delay-02">Oliver Street q g</span>
+                                        <span class="subhead-xxs anim-reveal tr-delay-02">Via Lorenzo Bonomo 27/29</span>
                                     </span>
                                 </span>
                                 <span class="list__item">
                                     <span class="d-inline-block hidden-box">
-                                        <span class="subhead-xxs anim-reveal tr-delay-03">East Victoria 2006 UK</span>
+                                        <span class="subhead-xxs anim-reveal tr-delay-03">76123 Andria (BT) </span>
                                     </span>
                                 </span>
                             </h6>
                             <div class="padding-top-10 anim-fade tr-delay-04">
-                                <a href="#" class="subhead-xxs text-color-dadada text-hover-to-red js-pointer-small">Open in google maps</a>
+                                <a href="https://www.google.com/maps/place/Via+Lorenzo+Bonomo,+27,+76123+Andria+BT/data=!4m2!3m1!1s0x13381a8102c055d1:0x305a597a1341f6df?sa=X&ved=2ahUKEwj9m_Cy8anrAhUGwKQKHd9HAqIQ8gEwAHoECAsQAQ" class="subhead-xxs text-color-dadada text-hover-to-red js-pointer-small" target="_blank">Apri in google maps</a>
                             </div>
                         </div>
                     </div><!-- column end -->
@@ -92,7 +100,7 @@
                     <!-- column start -->
                     <div class="four-columns column-50-100 padding-top-60">
                         <div class="column-r-margin-20 js-scrollanim">
-                            <p class="headline-xxxxs anim-text-double-fill invert" data-text="Call us">Call us</p>
+                            <p class="headline-xxxxs anim-text-double-fill invert" data-text="Telefono">Telefono</p>
                             <div class="padding-top-20">
                                 <h6 class="anim-fade tr-delay-01">
                                     <a href="#" class="subhead-xxs text-color-dadada text-hover-to-red js-pointer-small">+23 8 8345 7346</a>
@@ -111,64 +119,91 @@
                         <li class="list__item anim-fade">
                             <a href="#" class="fill-btn text-color-979797 js-pointer-small" data-text="Facebook">Facebook</a>
                         </li>
-                        <li class="list__item anim-fade tr-delay-01">
-                            <a href="#" class="fill-btn text-color-979797 js-pointer-small" data-text="Dribbble">Dribbble</a>
-                        </li>
                         <li class="list__item anim-fade tr-delay-02">
                             <a href="#" class="fill-btn text-color-979797 js-pointer-small" data-text="Instagram">Instagram</a>
-                        </li>
-                        <li class="list__item anim-fade tr-delay-03">
-                            <a href="#" class="fill-btn text-color-979797 js-pointer-small" data-text="Youtube">Youtube</a>
-                        </li>
-                        <li class="list__item anim-fade tr-delay-04">
-                            <a href="#" class="fill-btn text-color-979797 js-pointer-small" data-text="Behance">Behance</a>
-                        </li>
-                        <li class="list__item anim-fade tr-delay-05">
-                            <a href="#" class="fill-btn text-color-979797 js-pointer-small" data-text="Twitter">Twitter</a>
                         </li>
                     </ul>
                 </div><!-- social btns end -->
             </div><!-- container end -->
         </div><!-- pos-rel end -->
     </section><!-- contact us end -->
+<style>
+    input[type='text']{
+        color:black !important;
+    }
+    ::-webkit-input-placeholder { /* Edge */
+  color: black;
+}
 
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: black;
+}
+
+::placeholder {
+  color: black;
+}
+.form-input {
+
+    border-bottom: 1px solid rgba(0, 0, 0, .2)!important;
+
+    color: rgb(0, 0, 0) !important;
+
+}
+.border-btn__inner {
+
+    color: black;
+
+}
+#send .btn-wait {
+
+    color: black;
+
+}
+
+.border-btn:before, .border-btn:after, .border-btn__inner:before, .border-btn__inner:after {
+
+    background-color: #020202;
+
+}
+</style>
     <!-- form section start -->
-    <section class="pos-rel bg-img-cover" style="background-image:url(assets/images/backgrounds/architecture-buildings-city-fog-373965.jpg)">
+    <section class="pos-rel  section-bg-light-2" data-midnight="black" id="scrivici">
         <!-- bg-overlay -->
-        <div class="bg-overlay-black"></div>
+        {{-- <div class="bg-overlay-black"></div> --}}
         <!-- pos-rel start -->
-        <div class="pos-rel flex-min-height-100vh">
+        <div class="pos-rel  flex-min-height-100vh">
             <!-- container start -->
-            <div class="container small padding-top-bottom-120 form-box">
-                <h4 class="headline-xxxxs text-center">Lets Get In Touch!</h4>
+            <div class="container small padding-top-bottom-120 form-box text-color-black">
+                <h4 class="headline-xxs text-center">Lets Get In Touch!</h4>
                 <!-- flex-container start -->
-                <form action="" method="post" name="formobrsv" id="send_form" class="flex-container padding-top-90">
+                <form action="{{route('inviomail')}}" method="post" name="formobrsv" id="send_form" class="flex-container padding-top-90">
+                    @csrf
                     <!-- column start -->
                     <div class="four-columns">
                         <div class="column-r-margin-10">
-                            <input type="text" name="first_name" placeholder="Enter your name" id="first_name" required class="form-input js-pointer-small">
+                            <input type="text" name="nome" placeholder="Nome" id="first_name" required class="form-input js-pointer-small">
                         </div>
                     </div><!-- column end -->
                     <!-- column start -->
                     <div class="four-columns">
                         <div class="column-l-r-margin-5">
-                            <input type="text" name="last_name" placeholder="Enter your last name" id="last_name" required class="form-input js-pointer-small">
+                            <input type="text" name="cognome" placeholder="Cognome" id="last_name" required class="form-input js-pointer-small">
                         </div>
                     </div><!-- column end -->
                     <!-- column start -->
                     <div class="four-columns">
                         <div class="column-l-margin-10">
-                            <input type="email" name="email" placeholder="Enter your email address" id="email" required class="form-input js-pointer-small">
+                            <input type="email" name="email" placeholder="Email" id="email" required class="form-input js-pointer-small">
                         </div>
                     </div><!-- column end -->
                     <!-- column start -->
                     <div class="twelve-columns">
-                        <textarea name="message" placeholder="Enter your message" id="message" required class="form-input js-pointer-small"></textarea>
+                        <textarea name="messaggio" placeholder="scrivi il tuo messaggio" id="message" required class="form-input js-pointer-small"></textarea>
                     </div><!-- column end -->
                     <!-- column start -->
                     <div class="twelve-columns text-center padding-top-90">
-                        <button id="send" class="border-btn js-pointer-large">
-                            <span class="border-btn__inner">submit</span>
+                        <button name="submit" id="send" class="border-btn js-pointer-large text-color-black">
+                            <span class="border-btn__inner">invia</span>
                             <span class="btn-wait">Wait</span>
                             <span class="border-btn__lines-1"></span>
                             <span class="border-btn__lines-2"></span>
@@ -184,12 +219,12 @@
                         <i class="fas fa-check"></i>
                     </div>
                     <p class="popup-alert headline-xs">
-                        Thank you!<br>
-                        Your submission<br>
-                        has been received!
+                        Grazie!<br>
+                        La tua email<br>
+                        è stata ricevuta!
                     </p>
                     <div class="js-popup-close js-pointer-large">
-                        <div class="flip-btn" data-text="Close">Close</div>
+                        <div class="flip-btn" data-text="Chiudi">Chiudi</div>
                     </div>
                 </div>
             </div><!-- alert end -->
@@ -200,9 +235,9 @@
                     <div class="popup-icon">
                         <i class="fas fa-times"></i>
                     </div>
-                    <p class="popup-alert headline-xs">Error</p>
+                    <p class="popup-alert headline-xs">Errore</p>
                     <div class="js-popup-close js-pointer-large">
-                        <div class="flip-btn" data-text="Close">Close</div>
+                        <div class="flip-btn" data-text="Chiudi">Chiudi</div>
                     </div>
                 </div>
             </div><!-- alert end -->
@@ -211,3 +246,8 @@
 </main>
 
 @endsection
+
+@push('script')
+<script src="assets/js/particles.js"></script>
+<script src="assets/js/particles_init.js"></script>
+@endpush

@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/','PagesController@index')->name('home');
 Route::get('about-us','PagesController@about')->name('about');
-Route::get('servizi','PagesController@servizi')->name('servizi');
+Route::get('filtri-social','PagesController@filtrisocial')->name('filtri.social');
 Route::get('contatti','PagesController@contatti')->name('contatti');
 
+Route::post('inviomail','PagesController@inviomail')->name('inviomail');

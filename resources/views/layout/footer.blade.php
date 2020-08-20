@@ -24,14 +24,11 @@
                         <li>
                             <a href="{{route('home')}}" class="footer-nav__btn js-pointer-small js-footer-hover-link">Home</a>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a href="{{route('about')}}#" class="footer-nav__btn js-pointer-small js-footer-hover-link">About us</a>
-                        </li>
+                        </li> --}}
                         <li>
-                            <a href="{{route('servizi')}}" class="footer-nav__btn js-pointer-small js-footer-hover-link">Servizi</a>
-                        </li>
-                        <li>
-                            <a href="{{route('home')}}" class="footer-nav__btn js-pointer-small js-footer-hover-link">Portfolio</a>
+                            <a href="{{route('filtri.social')}}" class="footer-nav__btn js-pointer-small js-footer-hover-link">Filtri Social</a>
                         </li>
                         <li>
                             <a href="{{route('contatti')}}" class="footer-nav__btn js-pointer-small js-footer-hover-link">Contatti</a>
@@ -58,8 +55,8 @@
                         <div class="headline-xxxxs">Indirizzo</div>
                         <div class="margin-top-10">
                             <a href="#" class="subhead-xxs text-color-b0b0b0 text-hover-to-white js-pointer-small">
-                                PO Box 223158 Oliver Street<br>
-                                East Victoria 2006 UK
+                                Via Lorenzo Bonomo 27/29<br>
+                                76123 Andria(BT)
                             </a>
                         </div>
                     </div>
@@ -91,7 +88,7 @@
             <!-- footer-copyright start -->
             <div class="footer-copyright text-center pos-abs pos-bottom-center">
                 <p class="copyright-style">
-                    &copy; Copyright 2020 SHARESERVICE.  <a href="#" class="text-weight-700 js-pointer-small"></a>
+                    &copy; Copyright 2020 ONWAVE powered by  <a href="https://shareservice.it" target="_blank"  class="text-weight-700 js-pointer-small">SHARESERVICE</a>
                 </p>
             </div><!-- footer-copyright end -->
         </div><!-- container end -->

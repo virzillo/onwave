@@ -1,5 +1,5 @@
 const instance = new Typewriter('#js-typewriter', {
-	strings: ['UI/UX Designer', 'Art Director', 'Web Developer'],
+	strings: ['Base', 'Face', 'Element', 'Riconoscimento Logo'],
 	autoStart: true,
 	loop: true,
 });
