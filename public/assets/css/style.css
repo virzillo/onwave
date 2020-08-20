@@ -1902,8 +1902,8 @@ body.js-nav-active.js-page-in.js-page-out .preloader__logoload-box {
 
 .pointer {
 	overflow: hidden;
-	width:  30px;
-	height: 30px;
+	width:  15px;
+	height: 15px;
 	position: fixed;
 	left: -100px;
 	top: 50%;
@@ -2004,7 +2004,7 @@ body.js-page-out .pointer {
 	color: #000;
 }
 
-.pointer__inner.fa-search, 
+.pointer__inner.fa-search,
 .pointer__inner.fa-link {
 	-webkit-transform: translate(-50%, -50%) scale(0);
 	    -ms-transform: translate(-50%, -50%) scale(0);
@@ -2688,7 +2688,7 @@ body.js-page-out .pointer {
 	-webkit-transition-timing-function: cubic-bezier(.767, .01, .18, 1.01);
 	     -o-transition-timing-function: cubic-bezier(.767, .01, .18, 1.01);
 	        transition-timing-function: cubic-bezier(.767, .01, .18, 1.01);
-	will-change: transform; 
+	will-change: transform;
 }
 
 	.header-social.headroom--unpinned {

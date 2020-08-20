@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="author" content="Jinna Gik">
-		<meta name="description" content="UMAYA Template is a uniquely HTML5 template develop in HTML with a modern look.">
-		<meta name="keywords" content="creative, modern, clean, html5, css3, portfolio, blog, agency, templates, minimal">
+		<meta name="author" content="OnWave">
+		<meta name="description" content="@yield('metadescription')">
+		<meta name="keywords" content="@yield('keywords')">
 
 		<!-- favicon -->
 		<link rel="shortcut icon" href="assets/images/favicon.png">
