@@ -3,14 +3,14 @@
     <div class="header-logo js-midnight-color js-headroom">
         <div class="hidden-box">
             <a href="{{route('home')}}" class="header-logo__box js-pointer-large js-animsition-link">
-                <img class="header-logo__img white" src="assets/images/logo/logo-white.png" alt="logo">
-                <img class="header-logo__img black" src="assets/images/logo/logo-black.png" alt="logo">
+                <img class="header-logo__img white" src="assets/images/logo/onwave-white.png" alt="logo">
+                <img class="header-logo__img black" src="assets/images/logo/onwave-black.png" alt="logo">
             </a>
         </div>
     </div><!-- logo end -->
 
     <!-- menu-icon start -->
-    <div class="menu-icon vertical js-menu-open-close js-pointer-large js-midnight-color js-headroom">
+    <div class="menu-icon  js-menu-open-close js-pointer-large js-midnight-color js-headroom">
         <div class="menu-icon__box">
             <span class="menu-icon__inner"></span>
             <span class="menu-icon__close"></span>

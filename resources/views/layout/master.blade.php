@@ -25,7 +25,7 @@
 	<body class="preloader cursor-anim-enable dark-nav">
 		<!-- preloader-loading start -->
 		<div class="preloader__logoload-box">
-			<img class="preloader__logo" src="assets/images/logo/logo-white.png" alt="logo">
+			<img class="preloader__logo" src="assets/images/logo/onwave-white.png" alt="logo">
 			<div class="preloader__pulse"></div>
 		</div><!-- preloader-loading end -->
 

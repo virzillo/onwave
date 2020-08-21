@@ -23,11 +23,11 @@
     </section> --}}
 
 
-    <section id="up" class=" pos-rel anim-lines bg-img-cover" style="background-image:url(assets/images/sfondi/sfondo-colorato.jpg)">
+    <section id="up" class=" pos-rel  bg-img-cover" style="background-image:url(assets/images/sfondi/sfondo-colorato.jpg)">
         <!-- bg-overlay -->
         <div class="bg-overlay-black"></div>
         <!-- lines-container start -->
-        <div class="lines-container pos-rel anim-lines flex-min-height-100vh border-box-bottom">
+        <div class=" pos-rel  flex-min-height-100vh border-box-bottom">
             <div class="padding-top-bottom-120 container">
                 <!-- title start -->
                 <h2 class="headline-l after-preloader-anim ">
@@ -41,7 +41,7 @@
             </div>
         </div><!-- lines-container end -->
         <!-- particles -->
-        <div id="js-particles"></div>
+        {{-- <div id="js-particles"></div> --}}
     </section>
     <!-- page head end -->
 
@@ -239,8 +239,73 @@
 @endsection
 
 @push('script')
-<script src="assets/js/particles.js"></script>
-<script src="assets/js/particles_init.js"></script>
+{{-- <script src="assets/js/jquery.ripples-min.js"></script> --}}
+
+{{-- <script src="assets/js/particles.js"></script>
+<script src="assets/js/particles_init.js"></script> --}}
 <script src="assets/js/typewriter.js"></script>
 <script src="assets/js/typewriter_init.js"></script>
+
+<script src="assets/js/three.r119.min.js"></script>
+<script src="assets/js/vanta.halo.min.js"></script>
+<script>
+VANTA.HALO({
+  el: "#up",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  backgroundColor: 0x4656b6,
+  amplitudeFactor: 1.80,
+  size: 1.30
+})
+</script>
+
+{{-- <script>
+    $(document).ready(function() {
+        try {
+            $('#up').ripples({
+                resolution: 512,
+                dropRadius: 20, //px
+                perturbance: 0.04,
+            });
+            // $('main').ripples({
+            //     resolution: 128,
+            //     dropRadius: 10, //px
+            //     perturbance: 0.04,
+            //     interactive: false
+            // });
+        }
+        catch (e) {
+            $('.error').show().text(e);
+        }
+
+        $('.js-ripples-disable').on('click', function() {
+            $('#up, main').ripples('destroy');
+            $(this).hide();
+        });
+
+        $('.js-ripples-play').on('click', function() {
+            $('#up, main').ripples('play');
+        });
+
+        $('.js-ripples-pause').on('click', function() {
+            $('#up, main').ripples('pause');
+        });
+
+        // Automatic drops
+        setInterval(function() {
+            var $el = $('#up');
+            var x = Math.random() * $el.outerWidth();
+            var y = Math.random() * $el.outerHeight();
+            var dropRadius = 20;
+            var strength = 0.04 + Math.random() * 0.04;
+
+            $el.ripples('drop', x, y, dropRadius, strength);
+        }, 400);
+    });
+</script> --}}
+
+
 @endpush

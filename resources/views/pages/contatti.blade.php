@@ -5,11 +5,11 @@
 <main class="js-animsition-overlay" data-animsition-overlay="true">
 
 
-    <section id="up" class=" pos-rel anim-lines bg-img-cover" style="background-image:url(assets/images/projects/odonkor/red-haired-woman-wearing-black-lace-choker-2998400.jpg)">
+    <section id="up" class=" pos-rel  bg-img-cover" >
         <!-- bg-overlay -->
         <div class="bg-overlay-black"></div>
         <!-- lines-container start -->
-        <div class="lines-container pos-rel anim-lines flex-min-height-100vh border-box-bottom">
+        <div class=" pos-rel  flex-min-height-100vh border-box-bottom">
             <div class="padding-top-bottom-120 container">
                 <!-- title start -->
                 <h2 class="headline-xl after-preloader-anim">
@@ -30,7 +30,7 @@
             </div>
         </div><!-- lines-container end -->
         <!-- particles -->
-        <div id="js-particles"></div>
+        {{-- <div id="js-particles"></div> --}}
     </section><!-- page head end -->
 
     <!-- contact us start -->
@@ -248,6 +248,22 @@
 @endsection
 
 @push('script')
-<script src="assets/js/particles.js"></script>
-<script src="assets/js/particles_init.js"></script>
+{{-- <script src="assets/js/particles.js"></script>
+<script src="assets/js/particles_init.js"></script> --}}
+
+<script src="assets/js/three.r119.min.js"></script>
+<script src="assets/js/vanta.waves.min.js"></script>
+<script>
+VANTA.WAVES({
+  el: "#up",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00
+})
+</script>
+
 @endpush

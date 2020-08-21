@@ -1,4 +1,4 @@
-<footer class="fixed-footer pos-rel bg-img-cover js-fixed-footer" style="background-image:url(assets/images/backgrounds/man-holding-videocamera-standing-in-studio-3379943.jpg)">
+<footer class="fixed-footer pos-rel bg-img-cover js-fixed-footer" style="background-image:url(assets/images/sfondi/sfondo-colorato.jpg)">
     <!-- bg-overlay -->
     <div class="bg-overlay-black"></div>
     <!-- pos-rel start -->
@@ -7,7 +7,7 @@
         <div class="container padding-top-bottom-120">
             <!-- footer-logo start -->
             <div class="footer-logo footer-logo-desktop-hidden padding-bottom-90">
-                <img class="footer-logo__img" src="assets/images/logo/logo-white.png" alt="logo">
+                <img class="footer-logo__img" src="assets/images/logo/onwave-white.png" alt="logo">
             </div><!-- footer-logo end -->
 
             <!-- flex-container start -->

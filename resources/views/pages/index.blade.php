@@ -337,13 +337,14 @@
 			</section><!-- what we do end -->
 
             <!-- video content start -->
-			<div class="pos-rel bg-img-cover height-100vh" style="background-image:url(assets/images/projects/neon-lights/woman-wearing-beige-and-gray-hoodie-portrait-2272855.jpg)">
-				<div class="bg-overlay-black"></div>
-				<div class="pos-rel height-100perc">
+            <div class="pos-rel bg-img-cover height-100vh" style="background-image:url(assets/images/projects/neon-lights/woman-wearing-beige-and-gray-hoodie-portrait-2272855.jpg)">
+                <video src="http://www.nurseitmukaytegin.com/envato-templates/videos/dj.mp4" class="video-bg" muted loop autoplay playsinline></video>
+				{{-- <div class="bg-overlay-black"></div> --}}
+				{{-- <div class="pos-rel height-100perc">
 					<a href="https://www.youtube.com/watch?v=hitNXU4PoRU" class="play-button js-popup-youtube js-pointer-large">
 						<span class="play-button__inner"></span>
 					</a>
-				</div>
+				</div> --}}
             </div>
             <!-- video content end -->
 
