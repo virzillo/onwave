@@ -2,8 +2,25 @@
 
 @section('content')
 <main class="js-animsition-overlay" data-animsition-overlay="true">
+
+    <section id="up" class="pos-rel bg-img-cover" style="background-image:url(assets/images/sfondi/sfondo-colorato.jpg)">
+        <!-- bg-overlay -->
+        <div class="bg-overlay-black"></div>
+        <!-- pos-rel start -->
+        <div class="pos-rel flex-min-height-100vh">
+            <div class="padding-top-bottom-120 container small">
+                <!-- title start -->
+                <h2 class="headline-l after-preloader-anim">
+                    <span class="anim-text-fill" data-text="Onwave">Onwave</span>
+                    <span class="anim-text-fill tr-delay-01" data-text="we create">we create</span><br>
+                    <span id="js-typewriter" class="text-color-red"></span><br>
+                    <span class="anim-text-fill tr-delay-02" data-text="the future">the future</span>
+                </h2><!-- title end -->
+            </div>
+        </div><!-- pos-rel end -->
+    </section>
     <!-- home slider start -->
-			<section id="up" class="pos-rel section-bg-dark-1 js-home-slider fullscreen-slider">
+			{{-- <section id="up" class="pos-rel section-bg-dark-1 js-home-slider fullscreen-slider">
 				<!-- swiper-wrapper start -->
 				<div class="swiper-wrapper">
 					<!-- swiper-slide start -->
@@ -124,7 +141,7 @@
 						<div class="swiper-pagination counter-pagination"></div>
 					</div>
                 </div><!-- swiper-pagination end -->
-            </section>
+            </section> --}}
             <!-- home slider end -->
 
             	<!-- about us start -->
@@ -731,3 +748,54 @@
 
 </main>
 @endsection
+
+
+@push('script')
+<script src="assets/js/typewriter.js"></script>
+<script src="assets/js/typewriter_init.js"></script>
+<script src="assets/js/jquery.ripples-min.js"></script>
+<script>
+    $(document).ready(function() {
+        try {
+            $('#up').ripples({
+                resolution: 512,
+                dropRadius: 20, //px
+                perturbance: 0.04,
+            });
+            // $('main').ripples({
+            //     resolution: 128,
+            //     dropRadius: 10, //px
+            //     perturbance: 0.04,
+            //     interactive: false
+            // });
+        }
+        catch (e) {
+            $('.error').show().text(e);
+        }
+
+        $('.js-ripples-disable').on('click', function() {
+            $('#up, main').ripples('destroy');
+            $(this).hide();
+        });
+
+        $('.js-ripples-play').on('click', function() {
+            $('#up, main').ripples('play');
+        });
+
+        $('.js-ripples-pause').on('click', function() {
+            $('#up, main').ripples('pause');
+        });
+
+        // Automatic drops
+        setInterval(function() {
+            var $el = $('#up');
+            var x = Math.random() * $el.outerWidth();
+            var y = Math.random() * $el.outerHeight();
+            var dropRadius = 20;
+            var strength = 0.04 + Math.random() * 0.04;
+
+            $el.ripples('drop', x, y, dropRadius, strength);
+        }, 400);
+    });
+</script>
+@endpush
