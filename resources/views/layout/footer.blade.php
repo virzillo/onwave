@@ -44,8 +44,8 @@
                     <div class="column-l-r-margin-10">
                         <div class="headline-xxxxs">Email</div>
                         <div class="margin-top-10">
-                            <a href="#" class="subhead-xxs text-color-b0b0b0 text-hover-to-white js-pointer-small">email@umaya_agency.com</a><br>
-                            <a href="#" class="subhead-xxs text-color-b0b0b0 text-hover-to-white js-pointer-small">email@umaya_job.com</a>
+                            <a href="#" class="subhead-xxs text-color-b0b0b0 text-hover-to-white js-pointer-small">info@onwave.it</a><br>
+                            <a href="#" class="subhead-xxs text-color-b0b0b0 text-hover-to-white js-pointer-small">email@onwave.it</a>
                         </div>
                     </div>
                 </div><!-- column end -->

@@ -58,14 +58,14 @@
                             <p class="headline-xxxxs anim-text-double-fill invert" data-text="Email us">Email</p>
                             <div class="padding-top-20">
                                 <h6 class="anim-fade tr-delay-01">
-                                    <a href="#" class="subhead-xxs text-color-dadada text-hover-to-red js-pointer-small">email@umaya.com</a>
+                                    <a href="#" class="subhead-xxs text-color-dadada text-hover-to-red js-pointer-small">info@onwave.it</a>
                                 </h6><br>
                                 <h6 class="anim-fade tr-delay-02">
-                                    <a href="#" class="subhead-xxs text-color-dadada text-hover-to-red js-pointer-small">email@umaya_job.com</a>
+                                    <a href="#" class="subhead-xxs text-color-dadada text-hover-to-red js-pointer-small">email@onwave.it</a>
                                 </h6><br>
-                                <h6 class="anim-fade tr-delay-03">
+                                {{-- <h6 class="anim-fade tr-delay-03">
                                     <a href="#" class="subhead-xxs text-color-dadada text-hover-to-red js-pointer-small">email@umaya_agency.com</a>
-                                </h6>
+                                </h6> --}}
                             </div>
                         </div>
                     </div><!-- column end -->

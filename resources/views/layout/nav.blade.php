@@ -45,8 +45,8 @@
                     <div class="headline-xxxxs nav-title-color nav-reveal-anim js-nav-anim">Email</div>
                 </div>
                 <div class="nav-fade-anim js-nav-anim margin-top-10">
-                    <a href="#" class="subhead-xxs nav-text-color text-hover-to-red js-pointer-small">email@umaya_agency.com</a><br>
-                    <a href="#" class="subhead-xxs nav-text-color text-hover-to-red js-pointer-small">email@umaya_job.com</a>
+                    <a href="#" class="subhead-xxs nav-text-color text-hover-to-red js-pointer-small">info@onwave.it</a><br>
+                    <a href="#" class="subhead-xxs nav-text-color text-hover-to-red js-pointer-small">email@onwave.it</a>
                 </div>
             </div><!-- nav-email end -->
 
