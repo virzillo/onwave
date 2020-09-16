@@ -20,7 +20,8 @@
 
 		<!-- styles -->
 		<link href="{{asset('assets/css/plugins.css')}}" rel="stylesheet" type="text/css">
-		<link href="{{asset('assets/css/style.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('assets/css/style.css')}}" rel="stylesheet" type="text/css">
+        @stack('css')
 	</head>
 	<body class="preloader cursor-anim-enable dark-nav">
 		<!-- preloader-loading start -->

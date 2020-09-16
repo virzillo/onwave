@@ -60,7 +60,9 @@
                     <span class="anim-text-fill text-color-black" data-text="Tipologie">Tipologie </span>
                     <span class="text-color-red anim-text-fill tr-delay-02" data-text="Filtri">Filtri</span>
                 </h2>
-
+                <h4 class="headline-xxxs text-center text-color-black margin-top-20">
+                    Duis arcu tortor suscipit <span class="text-color-red"> Duis arcu tortor suscipit</span>
+                </h4>
 
                 <!-- flex-container start -->
                 <div class="flex-container padding-top-30">
@@ -68,14 +70,14 @@
                     <div class="four-columns column-50-100 padding-top-60">
                         <div class="line-col-l-r-margin-20 js-scrollanim">
                             <div class="anim-overlay">
-                                <img src="assets/images/services/barber/man-in-white-and-black-stripe-dress-shirt-3998424.jpg" alt="Barbershop">
+                                <img src="assets/images/Filtro_Basic.png" alt="FiltroARBasic">
                             </div>
                             <div class="margin-top-20 anim-text-reveal tr-delay-02">
-                                <h4 class="headline-xxxs text-color-black">
+                                <h4 class="headline-xxxs text-color-black text-center">
                                     Filtro <span class="text-color-red">Basic</span>
                                     {{-- <span class="text-color-red">godard</span> gochujang --}}
                                 </h4>
-                                <p class="body-text-xs text-color-black margin-top-20">descrizione...</p>
+                                <p class="body-text-xs text-color-black margin-top-20"></p>
                             </div>
                         </div>
                     </div><!-- column end -->
@@ -84,13 +86,13 @@
                     <div class="four-columns column-50-100 padding-top-60">
                         <div class="line-col-l-r-margin-20 js-scrollanim">
                             <div class="anim-overlay">
-                                <img src="assets/images/services/barber/man-taking-beard-shave-897262.jpg" alt="Barbershop">
+                                <img src="assets/images/Filtro_Face.png" alt="Face">
                             </div>
-                            <div class="margin-top-20 anim-text-reveal tr-delay-02">
+                            <div class="margin-top-20 anim-text-reveal tr-delay-02 text-center">
                                 <h4 class="headline-xxxs text-color-black">
                                     Filtro <span class="text-color-red">Face</span>
                                 </h4>
-                                <p class="body-text-xs text-color-black margin-top-20">descrizione...</p>
+                                <p class="body-text-xs text-color-black margin-top-20"></p>
                             </div>
                         </div>
                     </div><!-- column end -->
@@ -99,14 +101,14 @@
                     <div class="four-columns column-50-100 padding-top-60">
                         <div class="line-col-l-r-margin-20 js-scrollanim">
                             <div class="anim-overlay">
-                                <img src="assets/images/services/barber/mirror-reflection-of-man-shaving-man-s-beard-2035308.jpg" alt="Barbershop">
+                                <img src="assets/images/Filtro_Element.png" alt="Element">
                             </div>
-                            <div class="margin-top-20 anim-text-reveal tr-delay-02">
+                            <div class="margin-top-20 anim-text-reveal tr-delay-02 text-center">
                                 <h4 class="headline-xxxs text-color-black">
                                    Filtro
                                     <span class="text-color-red">Element</span>
                                 </h4>
-                                <p class="body-text-xs text-color-black margin-top-20">descrizione...</p>
+                                <p class="body-text-xs text-color-black margin-top-20"></p>
                             </div>
                         </div>
                     </div><!-- column end -->

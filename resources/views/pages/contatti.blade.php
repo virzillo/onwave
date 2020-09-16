@@ -127,45 +127,7 @@
             </div><!-- container end -->
         </div><!-- pos-rel end -->
     </section><!-- contact us end -->
-<style>
-    input[type='text']{
-        color:black !important;
-    }
-    ::-webkit-input-placeholder { /* Edge */
-  color: black;
-}
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: black;
-}
-
-::placeholder {
-  color: black;
-}
-.form-input {
-
-    border-bottom: 1px solid rgba(0, 0, 0, .2)!important;
-
-    color: rgb(0, 0, 0) !important;
-
-}
-.border-btn__inner {
-
-    color: black;
-
-}
-#send .btn-wait {
-
-    color: black;
-
-}
-
-.border-btn:before, .border-btn:after, .border-btn__inner:before, .border-btn__inner:after {
-
-    background-color: #020202;
-
-}
-</style>
     <!-- form section start -->
     <section class="pos-rel  section-bg-light-2" data-midnight="black" id="scrivici">
         <!-- bg-overlay -->
@@ -246,6 +208,48 @@
 </main>
 
 @endsection
+
+@push('css')
+<style>
+    input[type='text']{
+        color:black !important;
+    }
+    ::-webkit-input-placeholder { /* Edge */
+  color: black;
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: black;
+    }
+
+    ::placeholder {
+    color: black;
+    }
+    .form-input {
+
+        border-bottom: 1px solid rgba(0, 0, 0, .2)!important;
+
+        color: rgb(0, 0, 0) !important;
+
+    }
+    .border-btn__inner {
+
+        color: black;
+
+    }
+    #send .btn-wait {
+
+        color: black;
+
+    }
+
+    .border-btn:before, .border-btn:after, .border-btn__inner:before, .border-btn__inner:after {
+
+        background-color: #020202;
+
+    }
+</style>
+@endpush
 
 @push('script')
 {{-- <script src="assets/js/particles.js"></script>

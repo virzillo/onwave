@@ -220,7 +220,7 @@
 								<img src="assets/images/about/about_slider/man-people-desk-laptop-3931391.jpg" alt="About us">
 							</div><!-- swiper-slide end -->
 
-							<!-- swiper-slide start -->
+							{{-- <!-- swiper-slide start -->
 							<div class="swiper-slide">
 								<img src="assets/images/about/about_slider/photo-of-man-using-smartphone-3183191.jpg" alt="About us">
 							</div><!-- swiper-slide end -->
@@ -250,7 +250,8 @@
 							<!-- swiper-slide start -->
 							<div class="swiper-slide">
 								<img src="assets/images/about/about_slider/fashion-woman-girl-cute-3979104.jpg" alt="About us">
-							</div><!-- swiper-slide end -->
+                            </div><!-- swiper-slide end -->
+                             --}}
 						</div><!-- swiper-wrapper end -->
 					</div><!-- js-infinite-slider end -->
 				</div><!-- pos-rel end -->
@@ -355,7 +356,7 @@
 
             <!-- video content start -->
             <div class="pos-rel bg-img-cover height-100vh" style="background-image:url(assets/images/projects/neon-lights/woman-wearing-beige-and-gray-hoodie-portrait-2272855.jpg)">
-                <video src="http://www.nurseitmukaytegin.com/envato-templates/videos/dj.mp4" class="video-bg" muted loop autoplay playsinline></video>
+                <video src="https://www.nurseitmukaytegin.com/envato-templates/videos/dj.mp4" class="video-bg" muted loop autoplay playsinline></video>
 				{{-- <div class="bg-overlay-black"></div> --}}
 				{{-- <div class="pos-rel height-100perc">
 					<a href="https://www.youtube.com/watch?v=hitNXU4PoRU" class="play-button js-popup-youtube js-pointer-large">
@@ -379,8 +380,12 @@
 
 					<!-- filter-buttons start -->
 					<div class="list list_row list_center list_margin-30px padding-top-90 js-filter-button-box js-scrollanim">
+
 						<button class="list__item js-filter-button anim-fade js-pointer-small js-filter-button-active" data-filter="*">
 							<span class="flip-btn text-color-black" data-text="Everything">Everything</span>
+                        </button>
+                        <button class="list__item js-filter-button anim-fade tr-delay-03 js-pointer-small" data-filter=".website">
+							<span class="flip-btn text-color-black" data-text="Website">Website</span>
 						</button>
 						<button class="list__item js-filter-button anim-fade tr-delay-01 js-pointer-small" data-filter=".marketing">
 							<span class="flip-btn text-color-black" data-text="Marketing">Marketing</span>
@@ -388,89 +393,53 @@
 						<button class="list__item js-filter-button anim-fade tr-delay-02 js-pointer-small" data-filter=".photoshoot">
 							<span class="flip-btn text-color-black" data-text="Photoshoot">Photoshoot</span>
 						</button>
-						<button class="list__item js-filter-button anim-fade tr-delay-03 js-pointer-small" data-filter=".branding">
-							<span class="flip-btn text-color-black" data-text="Branding">Branding</span>
-						</button>
+
 					</div><!-- filter-buttons end -->
 
 					<!-- js-isotope-filter-grid-box start -->
-					<div class="js-isotope-filter-grid-box container full">
+					<div class="js-isotope-filter-grid-box container full" >
 						<!-- empty grid -->
 						<div class="js-isotope-filter-grid-item empty-grid-1px-33-50-none"></div>
 						<div class="js-isotope-filter-grid-item empty-grid-200px-33-none"></div>
 						<div class="js-isotope-filter-grid-item empty-grid-100px-33-50-none"></div>
 
 						<!-- grid-item start -->
-						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item branding">
-							<a href="project_beauty-lab.html" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
+						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item website">
+							<a href="" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
 								<div class="anim-img-scale anim-img-scale_hover js-img-scale">
-									<img class="anim-img-scale__inner" src="assets/images/projects/beauty-lab/beauty-beauty-product-cosmetics-makeup-2845213.jpg" alt="project">
+									<img class="anim-img-scale__inner" src="assets/images/Urban_ring_1.jpg" alt="project">
+								</div>
+								<div class="margin-top-10 js-scrollanim">
+									<span class="hidden-box d-block">
+										<span class="subhead-xxs text-color-red anim-slide">Website</span>
+									</span>
+									<h3 class="hidden-box">
+										<span class="headline-xxxs text-color-black anim-slide tr-delay-02">Urban Ring</span>
+									</h3>
+								</div>
+							</a>
+						</div><!-- grid-item end -->
+
+                        <!-- grid-item start -->
+						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item website">
+							<a href="" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
+								<div class="anim-img-scale anim-img-scale_hover js-img-scale">
+									<img class="anim-img-scale__inner" src="assets/images/projects/the-ordinary/the-ordinary-product-line-3685530.jpg" alt="project">
 								</div>
 								<div class="margin-top-10 js-scrollanim">
 									<span class="hidden-box d-block">
 										<span class="subhead-xxs text-color-red anim-slide">Branding</span>
 									</span>
 									<h3 class="hidden-box">
-										<span class="headline-xxxs text-color-black anim-slide tr-delay-02">Beauty lab</span>
+										<span class="headline-xxxs text-color-black anim-slide tr-delay-02">The ordinary</span>
 									</h3>
 								</div>
 							</a>
-						</div><!-- grid-item end -->
+                        </div><!-- grid-item end -->
 
 						<!-- grid-item start -->
 						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item marketing">
-							<a href="project_drone.html" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
-								<div class="anim-img-scale anim-img-scale_hover js-img-scale">
-									<img class="anim-img-scale__inner" src="assets/images/projects/sneakers/person-holding-a-shoes-3194608.jpg" alt="project">
-								</div>
-								<div class="margin-top-10 js-scrollanim">
-									<span class="hidden-box d-block">
-										<span class="subhead-xxs text-color-red anim-slide">Marketing</span>
-									</span>
-									<h3 class="hidden-box">
-										<span class="headline-xxxs text-color-black anim-slide tr-delay-02">Sneakers</span>
-									</h3>
-								</div>
-							</a>
-						</div><!-- grid-item end -->
-
-						<!-- grid-item start -->
-						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item marketing">
-							<a href="project_drone.html" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
-								<div class="anim-img-scale anim-img-scale_hover js-img-scale">
-									<img class="anim-img-scale__inner" src="assets/images/projects/knit-cap/man-wears-orange-knit-cap-and-shirt-2802601.jpg" alt="project">
-								</div>
-								<div class="margin-top-10 js-scrollanim">
-									<span class="hidden-box d-block">
-										<span class="subhead-xxs text-color-red anim-slide">Marketing</span>
-									</span>
-									<h3 class="hidden-box">
-										<span class="headline-xxxs text-color-black anim-slide tr-delay-02">Knit cap</span>
-									</h3>
-								</div>
-							</a>
-						</div><!-- grid-item end -->
-
-						<!-- grid-item start -->
-						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item photoshoot">
-							<a href="project_drone.html" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
-								<div class="anim-img-scale anim-img-scale_hover js-img-scale">
-									<img class="anim-img-scale__inner" src="assets/images/projects/pexels/woman-in-black-sexy-top-2825034.jpg" alt="project">
-								</div>
-								<div class="margin-top-10 js-scrollanim">
-									<span class="hidden-box d-block">
-										<span class="subhead-xxs text-color-red anim-slide">Photoshoot</span>
-									</span>
-									<h3 class="hidden-box">
-										<span class="headline-xxxs text-color-black anim-slide tr-delay-02">Pexels</span>
-									</h3>
-								</div>
-							</a>
-						</div><!-- grid-item end -->
-
-						<!-- grid-item start -->
-						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item marketing">
-							<a href="project_drone.html" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
+							<a href="" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
 								<div class="anim-img-scale anim-img-scale_hover js-img-scale">
 									<img class="anim-img-scale__inner" src="assets/images/projects/drone/quadcopter-on-wooden-surface-1601217.jpg" alt="project">
 								</div>
@@ -487,7 +456,7 @@
 
 						<!-- grid-item start -->
 						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item marketing">
-							<a href="project_blue-ridge.html" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
+							<a href="" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
 								<div class="anim-img-scale anim-img-scale_hover js-img-scale">
 									<img class="anim-img-scale__inner" src="assets/images/projects/blue-ridge/flat-lay-photography-of-several-product-bottles-on-withered-1667071.jpg" alt="project">
 								</div>
@@ -503,17 +472,17 @@
 						</div><!-- grid-item end -->
 
 						<!-- grid-item start -->
-						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item photoshoot">
-							<a href="project_drone.html" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
+						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item photoshoot" >
+							<a href="" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
 								<div class="anim-img-scale anim-img-scale_hover js-img-scale">
-									<img class="anim-img-scale__inner" src="assets/images/projects/hoop-earrings/woman-with-gold-colored-hoop-earrings-2420555.jpg" alt="project">
+									<img class="anim-img-scale__inner" src="assets/images/Urban_ring_1.jpg" alt="project">
 								</div>
 								<div class="margin-top-10 js-scrollanim">
 									<span class="hidden-box d-block">
 										<span class="subhead-xxs text-color-red anim-slide">Photoshoot</span>
 									</span>
 									<h3 class="hidden-box">
-										<span class="headline-xxxs text-color-black anim-slide tr-delay-02">Hoop earrings</span>
+										<span class="headline-xxxs text-color-black anim-slide tr-delay-02">Urban Ring</span>
 									</h3>
 								</div>
 							</a>
@@ -521,7 +490,7 @@
 
 						<!-- grid-item start -->
 						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item photoshoot">
-							<a href="project_drone.html" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
+							<a href="" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
 								<div class="anim-img-scale anim-img-scale_hover js-img-scale">
 									<img class="anim-img-scale__inner" src="assets/images/projects/black-eyes/woman-in-black-tube-top-beside-woman-in-white-off-shoulder-3823424-2.jpg" alt="project">
 								</div>
@@ -536,22 +505,7 @@
 							</a>
 						</div><!-- grid-item end -->
 
-						<!-- grid-item start -->
-						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item branding">
-							<a href="project_drone.html" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
-								<div class="anim-img-scale anim-img-scale_hover js-img-scale">
-									<img class="anim-img-scale__inner" src="assets/images/projects/the-ordinary/the-ordinary-product-line-3685530.jpg" alt="project">
-								</div>
-								<div class="margin-top-10 js-scrollanim">
-									<span class="hidden-box d-block">
-										<span class="subhead-xxs text-color-red anim-slide">Branding</span>
-									</span>
-									<h3 class="hidden-box">
-										<span class="headline-xxxs text-color-black anim-slide tr-delay-02">The ordinary</span>
-									</h3>
-								</div>
-							</a>
-						</div><!-- grid-item end -->
+
 					</div><!-- js-isotope-filter-grid-box end -->
 				</div><!-- pos-rel end -->
             </section>
