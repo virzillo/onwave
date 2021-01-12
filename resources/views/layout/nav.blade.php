@@ -20,8 +20,8 @@
                 </a>
             </li>
             {{-- <li class="nav-btn-box">
-                <a href="{{route('about')}}" class="nav-btn large dropdown-hidden-btn js-animsition-link js-pointer-large">
-                    <span class="nav-btn__inner" data-text="About us">About us</span>
+                <a href="{{route('portfolio')}}" class="nav-btn large dropdown-hidden-btn js-animsition-link js-pointer-large">
+                    <span class="nav-btn__inner" data-text="Portfolio">Portfolio</span>
                 </a>
             </li> --}}
             <li class="nav-btn-box">
@@ -45,8 +45,8 @@
                     <div class="headline-xxxxs nav-title-color nav-reveal-anim js-nav-anim">Email</div>
                 </div>
                 <div class="nav-fade-anim js-nav-anim margin-top-10">
-                    <a href="#" class="subhead-xxs nav-text-color text-hover-to-red js-pointer-small">info@onwave.it</a><br>
-                    <a href="#" class="subhead-xxs nav-text-color text-hover-to-red js-pointer-small">email@onwave.it</a>
+                    <a href="mailto:info@onwave.it" class="subhead-xxs nav-text-color text-hover-to-red js-pointer-small">info@onwave.it</a><br>
+                    {{-- <a href="#" class="subhead-xxs nav-text-color text-hover-to-red js-pointer-small">email@onwave.it</a> --}}
                 </div>
             </div><!-- nav-email end -->
 
@@ -56,7 +56,7 @@
                     <div class="headline-xxxxs nav-title-color nav-reveal-anim js-nav-anim">Indirizzo</div>
                 </div>
                 <div class="nav-fade-anim js-nav-anim margin-top-10">
-                    <a href="#" class="subhead-xxs nav-text-color text-hover-to-red js-pointer-small">
+                    <a href="https://www.google.com/maps/place/Via+Lorenzo+Bonomo,+27,+76123+Andria+BT/data=!4m2!3m1!1s0x13381a8102c055d1:0x305a597a1341f6df?sa=X&ved=2ahUKEwj9m_Cy8anrAhUGwKQKHd9HAqIQ8gEwAHoECAsQAQ" class="subhead-xxs nav-text-color text-hover-to-red js-pointer-small">
                        Via Lorenzo Bonomo 27/29<br>
                         76123 Andria (BT)
                     </a>
@@ -69,8 +69,8 @@
                     <div class="headline-xxxxs nav-title-color nav-reveal-anim js-nav-anim">Telefono</div>
                 </div>
                 <div class="nav-fade-anim js-nav-anim margin-top-10">
-                    <a href="#" class="subhead-xxs nav-text-color text-hover-to-red js-pointer-small">+23 8 8532 7834</a><br>
-                    <a href="#" class="subhead-xxs nav-text-color text-hover-to-red js-pointer-small">+23 8 9635 7335</a>
+                    <a href="tel:+390883950375" class="subhead-xxs nav-text-color text-hover-to-red js-pointer-small">+39 0883 950375</a><br>
+                    {{-- <a href="#" class="subhead-xxs nav-text-color text-hover-to-red js-pointer-small">+23 8 9635 7335</a> --}}
                 </div>
             </div><!-- nav-phone end -->
         </div><!-- nav-information end -->
@@ -78,7 +78,7 @@
         <!-- nav-copyright start -->
         <div class="nav-copyright text-right">
             <p class="copyright-style nav-fade-anim js-nav-anim">
-                &copy; Copyright 2020 ONWAVE powered by <a href="https://shareservice.it" target="_blank" class="text-weight-700 js-pointer-small">SHARESERVICE</a>
+                &copy; Copyright 2020 ONWAVE
             </p>
         </div><!-- nav-copyright end -->
     </div><!-- pos-rel end -->

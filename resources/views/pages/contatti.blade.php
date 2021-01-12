@@ -23,7 +23,7 @@
                     </span>
                     <span class="hidden-box d-block">
                         <span class="anim-slide tr-delay-02">
-                            Novation <span class="text-color-red">Ideas</span>
+                            Wonderful <span class="text-color-red">Ideas</span>
                         </span>
                     </span>
                 </h2><!-- title end -->
@@ -58,11 +58,11 @@
                             <p class="headline-xxxxs anim-text-double-fill invert" data-text="Email us">Email</p>
                             <div class="padding-top-20">
                                 <h6 class="anim-fade tr-delay-01">
-                                    <a href="#" class="subhead-xxs text-color-dadada text-hover-to-red js-pointer-small">info@onwave.it</a>
+                                    <a href="mailto:info@onwave.it" class="subhead-xxs text-color-dadada text-hover-to-red js-pointer-small">info@onwave.it</a>
                                 </h6><br>
-                                <h6 class="anim-fade tr-delay-02">
+                                {{-- <h6 class="anim-fade tr-delay-02">
                                     <a href="#" class="subhead-xxs text-color-dadada text-hover-to-red js-pointer-small">email@onwave.it</a>
-                                </h6><br>
+                                </h6><br> --}}
                                 {{-- <h6 class="anim-fade tr-delay-03">
                                     <a href="#" class="subhead-xxs text-color-dadada text-hover-to-red js-pointer-small">email@umaya_agency.com</a>
                                 </h6> --}}
@@ -103,11 +103,11 @@
                             <p class="headline-xxxxs anim-text-double-fill invert" data-text="Telefono">Telefono</p>
                             <div class="padding-top-20">
                                 <h6 class="anim-fade tr-delay-01">
-                                    <a href="#" class="subhead-xxs text-color-dadada text-hover-to-red js-pointer-small">+23 8 8345 7346</a>
+                                    <a href="tel:+390883950375" class="subhead-xxs text-color-dadada text-hover-to-red js-pointer-small">+39 0883 950375</a>
                                 </h6><br>
-                                <h6 class="anim-fade tr-delay-02">
+                                {{-- <h6 class="anim-fade tr-delay-02">
                                     <a href="#" class="subhead-xxs text-color-dadada text-hover-to-red js-pointer-small">+23 8 8532 7834</a>
-                                </h6>
+                                </h6> --}}
                             </div>
                         </div>
                     </div><!-- column end -->
@@ -117,10 +117,10 @@
                 <div class="padding-top-90">
                     <ul class="list list_row list_margin-30px js-scrollanim">
                         <li class="list__item anim-fade">
-                            <a href="#" class="fill-btn text-color-979797 js-pointer-small" data-text="Facebook">Facebook</a>
+                            <a href="https://www.facebook.com/onwave.it" class="fill-btn text-color-979797 js-pointer-small" data-text="Facebook">Facebook</a>
                         </li>
                         <li class="list__item anim-fade tr-delay-02">
-                            <a href="#" class="fill-btn text-color-979797 js-pointer-small" data-text="Instagram">Instagram</a>
+                            <a href="https://www.instagram.com/onwaveagency/" class="fill-btn text-color-979797 js-pointer-small" data-text="Instagram">Instagram</a>
                         </li>
                     </ul>
                 </div><!-- social btns end -->
@@ -215,7 +215,7 @@
         color:black !important;
     }
     ::-webkit-input-placeholder { /* Edge */
-  color: black;
+    color: black;
     }
 
     :-ms-input-placeholder { /* Internet Explorer 10-11 */
@@ -258,16 +258,16 @@
 <script src="assets/js/three.r119.min.js"></script>
 <script src="assets/js/vanta.waves.min.js"></script>
 <script>
-VANTA.WAVES({
-  el: "#up",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: true,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00
-})
+    VANTA.WAVES({
+    el: "#up",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: true,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00
+    })
 </script>
 
 @endpush

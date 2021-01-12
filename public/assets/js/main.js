@@ -53,72 +53,72 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-	document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
-		e.style.left = n.clientX + "px",
-		e.style.top = n.clientY + "px"
-	});
-	var
-		e = document.getElementById("js-pointer");
+	// document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
+	// 	e.style.left = n.clientX + "px",
+	// 	e.style.top = n.clientY + "px"
+	// });
+	// var
+	// 	e = document.getElementById("js-pointer");
 
-	$(document).mousemove(function(e) {
+	// $(document).mousemove(function(e) {
 
-		$(".js-pointer-black")
-		.on("mouseenter", function() {
-			$('.js-pointer').addClass("js-black")
-		})
-		.on("mouseleave", function() {
-			$('.js-pointer').removeClass("js-black")
-		})
+	// 	$(".js-pointer-black")
+	// 	.on("mouseenter", function() {
+	// 		$('.js-pointer').addClass("js-black")
+	// 	})
+	// 	.on("mouseleave", function() {
+	// 		$('.js-pointer').removeClass("js-black")
+	// 	})
 
-		$(".js-pointer-large, .swiper-button-next, .swiper-button-prev, .mfp-arrow-left, .mfp-arrow-right")
-		.on("mouseenter", function() {
-			$('.js-pointer').addClass("js-large")
-		})
-		.on("mouseleave", function() {
-			$('.js-pointer').removeClass("js-large")
-		})
+	// 	$(".js-pointer-large, .swiper-button-next, .swiper-button-prev, .mfp-arrow-left, .mfp-arrow-right")
+	// 	.on("mouseenter", function() {
+	// 		$('.js-pointer').addClass("js-large")
+	// 	})
+	// 	.on("mouseleave", function() {
+	// 		$('.js-pointer').removeClass("js-large")
+	// 	})
 
-		$(".js-pointer-small, .swiper-pagination-bullet")
-		.on("mouseenter", function() {
-			$('.js-pointer').addClass("js-small")
-		})
-		.on("mouseleave", function() {
-			$('.js-pointer').removeClass("js-small")
-		})
+	// 	$(".js-pointer-small, .swiper-pagination-bullet")
+	// 	.on("mouseenter", function() {
+	// 		$('.js-pointer').addClass("js-small")
+	// 	})
+	// 	.on("mouseleave", function() {
+	// 		$('.js-pointer').removeClass("js-small")
+	// 	})
 
-		$(".js-pointer-right, .mfp-img")
-		.on("mouseenter", function() {
-			$('.js-pointer').addClass("js-right")
-		})
-		.on("mouseleave", function() {
-			$('.js-pointer').removeClass("js-right")
-		})
+	// 	$(".js-pointer-right, .mfp-img")
+	// 	.on("mouseenter", function() {
+	// 		$('.js-pointer').addClass("js-right")
+	// 	})
+	// 	.on("mouseleave", function() {
+	// 		$('.js-pointer').removeClass("js-right")
+	// 	})
 
-		$(".js-pointer-zoom")
-		.on("mouseenter", function() {
-			$('.js-pointer').addClass("js-zoom")
-		})
-		.on("mouseleave", function() {
-			$('.js-pointer').removeClass("js-zoom")
-		})
+	// 	$(".js-pointer-zoom")
+	// 	.on("mouseenter", function() {
+	// 		$('.js-pointer').addClass("js-zoom")
+	// 	})
+	// 	.on("mouseleave", function() {
+	// 		$('.js-pointer').removeClass("js-zoom")
+	// 	})
 
-		$(".js-pointer-open")
-		.on("mouseenter", function() {
-			$('.js-pointer').addClass("js-open")
-		})
-		.on("mouseleave", function() {
-			$('.js-pointer').removeClass("js-open")
-		})
+	// 	$(".js-pointer-open")
+	// 	.on("mouseenter", function() {
+	// 		$('.js-pointer').addClass("js-open")
+	// 	})
+	// 	.on("mouseleave", function() {
+	// 		$('.js-pointer').removeClass("js-open")
+	// 	})
 
-		$(".js-pointer-none")
-		.on("mouseenter", function() {
-			$('.js-pointer').addClass("js-none")
-		})
-		.on("mouseleave", function() {
-			$('.js-pointer').removeClass("js-none")
-		})
+	// 	$(".js-pointer-none")
+	// 	.on("mouseenter", function() {
+	// 		$('.js-pointer').addClass("js-none")
+	// 	})
+	// 	.on("mouseleave", function() {
+	// 		$('.js-pointer').removeClass("js-none")
+	// 	})
 
-	});
+	// });
 
 	$(document).ready(function() {
 

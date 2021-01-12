@@ -25,7 +25,7 @@
                             <a href="{{route('home')}}" class="footer-nav__btn js-pointer-small js-footer-hover-link">Home</a>
                         </li>
                         {{-- <li>
-                            <a href="{{route('about')}}#" class="footer-nav__btn js-pointer-small js-footer-hover-link">About us</a>
+                            <a href="{{route('portfolio')}}" class="footer-nav__btn js-pointer-small js-footer-hover-link">Portfolio</a>
                         </li> --}}
                         <li>
                             <a href="{{route('filtri.social')}}" class="footer-nav__btn js-pointer-small js-footer-hover-link">Filtri Social</a>
@@ -44,8 +44,8 @@
                     <div class="column-l-r-margin-10">
                         <div class="headline-xxxxs">Email</div>
                         <div class="margin-top-10">
-                            <a href="#" class="subhead-xxs text-color-b0b0b0 text-hover-to-white js-pointer-small">info@onwave.it</a><br>
-                            <a href="#" class="subhead-xxs text-color-b0b0b0 text-hover-to-white js-pointer-small">email@onwave.it</a>
+                            <a href="mailto:info@onwave.it" class="subhead-xxs text-color-b0b0b0 text-hover-to-white js-pointer-small">info@onwave.it</a><br>
+                            {{-- <a href="#" class="subhead-xxs text-color-b0b0b0 text-hover-to-white js-pointer-small">email@onwave.it</a> --}}
                         </div>
                     </div>
                 </div><!-- column end -->
@@ -54,7 +54,7 @@
                     <div class="column-l-r-margin-10">
                         <div class="headline-xxxxs">Indirizzo</div>
                         <div class="margin-top-10">
-                            <a href="#" class="subhead-xxs text-color-b0b0b0 text-hover-to-white js-pointer-small">
+                            <a href="https://www.google.com/maps/place/Via+Lorenzo+Bonomo,+27,+76123+Andria+BT/data=!4m2!3m1!1s0x13381a8102c055d1:0x305a597a1341f6df?sa=X&ved=2ahUKEwj9m_Cy8anrAhUGwKQKHd9HAqIQ8gEwAHoECAsQAQ" class="subhead-xxs text-color-b0b0b0 text-hover-to-white js-pointer-small">
                                 Via Lorenzo Bonomo 27/29<br>
                                 76123 Andria(BT)
                             </a>
@@ -66,8 +66,8 @@
                     <div class="column-l-r-margin-10">
                         <div class="headline-xxxxs">Telefono</div>
                         <div class="margin-top-10">
-                            <a href="#" class="subhead-xxs text-color-b0b0b0 text-hover-to-white js-pointer-small">+23 8 8532 7834</a><br>
-                            <a href="#" class="subhead-xxs text-color-b0b0b0 text-hover-to-white js-pointer-small">+23 8 9635 7335</a>
+                            <a href="tel:+390883950375" class="subhead-xxs text-color-b0b0b0 text-hover-to-white js-pointer-small">+39 0883 950375</a><br>
+                            {{-- <a href="#" class="subhead-xxs text-color-b0b0b0 text-hover-to-white js-pointer-small">+23 8 9635 7335</a> --}}
                         </div>
                     </div>
                 </div><!-- column end -->
@@ -76,11 +76,11 @@
             <!-- footer-social start -->
             <ul class="footer-social-desktop-hidden list list_center padding-top-90">
                 <li class="list__item">
-                    <a href="#" class="flip-btn js-pointer-small" data-text="Facebook">Facebook</a>
+                    <a href="https://www.facebook.com/onwave.it" class="flip-btn js-pointer-small" data-text="Facebook">Facebook</a>
                 </li>
 
                 <li class="list__item">
-                    <a href="#" class="flip-btn js-pointer-small" data-text="Instagram">Instagram</a>
+                    <a href="https://www.instagram.com/onwaveagency/" class="flip-btn js-pointer-small" data-text="Instagram">Instagram</a>
                 </li>
 
             </ul><!-- footer-social end -->
@@ -88,7 +88,7 @@
             <!-- footer-copyright start -->
             <div class="footer-copyright text-center pos-abs pos-bottom-center">
                 <p class="copyright-style">
-                    &copy; Copyright 2020 ONWAVE powered by  <a href="https://shareservice.it" target="_blank"  class="text-weight-700 js-pointer-small">SHARESERVICE</a>
+                    &copy; Copyright 2020 ONWAVE
                 </p>
             </div><!-- footer-copyright end -->
         </div><!-- container end -->

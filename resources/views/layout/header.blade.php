@@ -33,14 +33,14 @@
         <ul class="list list_center list_margin-20px hidden-box">
             <li class="list__item">
                 <div class="hidden-box d-inline-block">
-                    <a href="#" class="anim-slide js-pointer-small">
+                    <a href="https://www.facebook.com/onwave.it" class="anim-slide js-pointer-small">
                         <i class="fab fa-facebook-f"></i>
                     </a>
                 </div>
             </li>
             <li class="list__item">
                 <div class="hidden-box d-inline-block">
-                    <a href="#" class="anim-slide tr-delay-04 js-pointer-small">
+                    <a href="https://www.instagram.com/onwaveagency/" class="anim-slide tr-delay-04 js-pointer-small">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>

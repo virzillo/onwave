@@ -60,9 +60,9 @@
                     <span class="anim-text-fill text-color-black" data-text="Tipologie">Tipologie </span>
                     <span class="text-color-red anim-text-fill tr-delay-02" data-text="Filtri">Filtri</span>
                 </h2>
-                <h4 class="headline-xxxs text-center text-color-black margin-top-20">
+                {{-- <h4 class="headline-xxxs text-center text-color-black margin-top-20">
                     Duis arcu tortor suscipit <span class="text-color-red"> Duis arcu tortor suscipit</span>
-                </h4>
+                </h4> --}}
 
                 <!-- flex-container start -->
                 <div class="flex-container padding-top-30">
@@ -117,8 +117,8 @@
         </div><!-- lines-container end -->
     </section>
 
-	<!-- albums start -->
-    <section class="pos-rel section-bg-dark-1">
+	<!-- riconoscimento logo-->
+    {{-- <section class="pos-rel section-bg-dark-1">
         <!-- pos-rel start -->
         <div class="pos-rel padding-top-bottom-120">
             <!-- title start -->
@@ -232,8 +232,8 @@
                 </div><!-- swiper-pagination end -->
             </div><!-- js-3-view-slider end -->
         </div><!-- pos-rel end -->
-    </section>
-    <!-- albums end -->
+    </section> --}}
+    <!-- riconoscimento logo -->
 
 </main>
 

@@ -1,9 +1,135 @@
 @extends('layout.master')
 
 @section('content')
-<main class="js-animsition-overlay" data-animsition-overlay="true">
+@push('style')
+	{{-- <style>
 
-    <section id="up" class="pos-rel bg-img-cover" style="background-image:url(assets/images/sfondi/sfondo-colorato.jpg)">
+canvas {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+	</style>
+@endpush
+@push('script')
+	<script>
+		const canvas = document.querySelector("canvas");
+const context = canvas.getContext("2d");
+
+const lines = [];
+
+const colors = [
+  ["#4f3a4b", "#e55256"],
+//   ["#fff", "#111"],
+  ["#e37169", "#26282a"],
+  ["#eed87b", "#28292b"],
+  ["#0d5b5c", "#e6e6e6"],
+  ["#d4e8e1", "#e24c68"],
+  ["#fbfc65", "#1666bd"],
+  ["#f3c8ed", "#1790d0"],
+  ["#111", "#fff"]
+];
+
+var colorIndex = -1;
+
+var step = 0,
+  width = 0,
+  height = 0;
+
+document.ontouchstart = color;
+document.onmousedown = color;
+window.onresize = setup;
+
+setup();
+color();
+update();
+
+function setup() {
+  (width = window.innerWidth), (height = window.innerHeight);
+
+  lines.length = 0;
+
+  let lineCount = height / 26;
+  let pointCount = 14;
+  let spacingH = width / pointCount;
+  let spacingV = height / lineCount;
+
+  for (let v = 0; v < lineCount; v++) {
+    let line = { points: [], ran: 0.2 + Math.random() * 0.7 };
+
+    for (let h = 0; h < pointCount; h++) {
+      line.points.push({
+        nx: h * spacingH,
+        ny: v * spacingV
+      });
+    }
+
+    line.points.push({
+      nx: width + spacingH,
+      ny: v * spacingV
+    });
+
+    lines.push(line);
+  }
+}
+
+function color() {
+  colorIndex = ++colorIndex % colors.length;
+  canvas.style.backgroundColor = colors[colorIndex][0];
+}
+
+function update() {
+  step += 0.8;
+
+  canvas.width = width;
+  canvas.height = height;
+
+  context.clearRect(0, 0, width, height);
+
+  context.lineWidth = 2;
+  context.strokeStyle = colors[colorIndex][1];
+  context.fillStyle = colors[colorIndex][0];
+
+  lines.forEach((line, v) => {
+    context.beginPath();
+
+    line.points.forEach((point, h) => {
+      (point.x = point.nx),
+        (point.y =
+          point.ny +
+          Math.sin((point.x * line.ran + (step + point.ny)) / 40) *
+            (6 + (point.ny / height) * 34));
+    });
+
+    line.points.forEach((point, h) => {
+      let nextPoint = line.points[h + 1];
+
+      if (h === 0) {
+        context.moveTo(point.x, point.y);
+      } else if (nextPoint) {
+        let cpx = point.x + (nextPoint.x - point.x) / 2;
+        let cpy = point.y + (nextPoint.y - point.y) / 2;
+        context.quadraticCurveTo(point.x, point.y, cpx, cpy);
+      }
+    });
+
+    context.stroke();
+
+    context.lineTo(width, height);
+    context.lineTo(0, height);
+    context.closePath();
+    context.fill();
+  });
+
+  requestAnimationFrame(update);
+}
+
+</script> --}}
+@endpush
+<main class="js-animsition-overlay" data-animsition-overlay="true">
+{{-- <canvas></canvas> --}}
+
+    <section id="up" class="pos-rel bg-img-cover" style="background-image:url(assets/images/sfondi/sfondo-colorato.jpg); ">
         <!-- bg-overlay -->
         <div class="bg-overlay-black"></div>
         <!-- pos-rel start -->
@@ -11,14 +137,17 @@
             <div class="padding-top-bottom-120 container small">
                 <!-- title start -->
                 <h2 class="headline-l after-preloader-anim">
-                    <span class="anim-text-fill" data-text="Onwave">Onwave</span>
+                    <span class="anim-text-fill" data-text="Onwave, ">Onwave, </span>
                     <span class="anim-text-fill tr-delay-01" data-text="we create">we create</span><br>
-                    <span id="js-typewriter" class="text-color-red"></span><br>
+                    <span id="js-typewriter1" class="text-color-red"></span><br>
                     <span class="anim-text-fill tr-delay-02" data-text="the future">the future</span>
                 </h2><!-- title end -->
             </div>
         </div><!-- pos-rel end -->
-    </section>
+
+
+	</section>
+
     <!-- home slider start -->
 			{{-- <section id="up" class="pos-rel section-bg-dark-1 js-home-slider fullscreen-slider">
 				<!-- swiper-wrapper start -->
@@ -201,7 +330,7 @@
 					</div><!-- flex-container end -->
 
 					<!-- js-infinite-slider start -->
-					<div class="js-infinite-slider about-slider hidden-box">
+					{{-- <div class="js-infinite-slider about-slider hidden-box">
 						<!-- swiper-wrapper start -->
 						<div class="swiper-wrapper">
 							<!-- swiper-slide start -->
@@ -220,7 +349,7 @@
 								<img src="assets/images/about/about_slider/man-people-desk-laptop-3931391.jpg" alt="About us">
 							</div><!-- swiper-slide end -->
 
-							{{-- <!-- swiper-slide start -->
+							<!-- swiper-slide start -->
 							<div class="swiper-slide">
 								<img src="assets/images/about/about_slider/photo-of-man-using-smartphone-3183191.jpg" alt="About us">
 							</div><!-- swiper-slide end -->
@@ -251,9 +380,11 @@
 							<div class="swiper-slide">
 								<img src="assets/images/about/about_slider/fashion-woman-girl-cute-3979104.jpg" alt="About us">
                             </div><!-- swiper-slide end -->
-                             --}}
-						</div><!-- swiper-wrapper end -->
-					</div><!-- js-infinite-slider end -->
+
+                        </div>
+                        <!-- swiper-wrapper end -->
+                    </div> --}}
+                    <!-- js-infinite-slider end -->
 				</div><!-- pos-rel end -->
             </section>
             <!-- about us end -->
@@ -356,7 +487,7 @@
 
             <!-- video content start -->
             <div class="pos-rel bg-img-cover height-100vh" style="background-image:url(assets/images/projects/neon-lights/woman-wearing-beige-and-gray-hoodie-portrait-2272855.jpg)">
-                <video src="https://www.nurseitmukaytegin.com/envato-templates/videos/dj.mp4" class="video-bg" muted loop autoplay playsinline></video>
+                <video src="/assets/dj.mp4" class="video-bg" muted loop autoplay playsinline></video>
 				{{-- <div class="bg-overlay-black"></div> --}}
 				{{-- <div class="pos-rel height-100perc">
 					<a href="https://www.youtube.com/watch?v=hitNXU4PoRU" class="play-button js-popup-youtube js-pointer-large">
@@ -405,7 +536,7 @@
 
 						<!-- grid-item start -->
 						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item website">
-							<a href="" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
+							<a href="{{route('portfolio')}}" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
 								<div class="anim-img-scale anim-img-scale_hover js-img-scale">
 									<img class="anim-img-scale__inner" src="assets/images/Urban_ring_1.jpg" alt="project">
 								</div>
@@ -422,7 +553,7 @@
 
                         <!-- grid-item start -->
 						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item website">
-							<a href="" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
+							<a href="{{route('portfolio')}}" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
 								<div class="anim-img-scale anim-img-scale_hover js-img-scale">
 									<img class="anim-img-scale__inner" src="assets/images/projects/the-ordinary/the-ordinary-product-line-3685530.jpg" alt="project">
 								</div>
@@ -439,7 +570,7 @@
 
 						<!-- grid-item start -->
 						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item marketing">
-							<a href="" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
+							<a href="{{route('portfolio')}}" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
 								<div class="anim-img-scale anim-img-scale_hover js-img-scale">
 									<img class="anim-img-scale__inner" src="assets/images/projects/drone/quadcopter-on-wooden-surface-1601217.jpg" alt="project">
 								</div>
@@ -456,7 +587,7 @@
 
 						<!-- grid-item start -->
 						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item marketing">
-							<a href="" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
+							<a href="{{route('portfolio')}}" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
 								<div class="anim-img-scale anim-img-scale_hover js-img-scale">
 									<img class="anim-img-scale__inner" src="assets/images/projects/blue-ridge/flat-lay-photography-of-several-product-bottles-on-withered-1667071.jpg" alt="project">
 								</div>
@@ -473,9 +604,9 @@
 
 						<!-- grid-item start -->
 						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item photoshoot" >
-							<a href="" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
+							<a href="{{route('portfolio')}}" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
 								<div class="anim-img-scale anim-img-scale_hover js-img-scale">
-									<img class="anim-img-scale__inner" src="assets/images/Urban_ring_1.jpg" alt="project">
+									<img class="anim-img-scale__inner" src="assets/images/Urban_ring_1.jpg" alt="Urban Ring">
 								</div>
 								<div class="margin-top-10 js-scrollanim">
 									<span class="hidden-box d-block">
@@ -490,16 +621,16 @@
 
 						<!-- grid-item start -->
 						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item photoshoot">
-							<a href="" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
+							<a href="{{route('portfolio')}}" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
 								<div class="anim-img-scale anim-img-scale_hover js-img-scale">
-									<img class="anim-img-scale__inner" src="assets/images/projects/black-eyes/woman-in-black-tube-top-beside-woman-in-white-off-shoulder-3823424-2.jpg" alt="project">
+									<img class="anim-img-scale__inner" src="assets/images/CRBRS.jpg" alt="CRBRS">
 								</div>
 								<div class="margin-top-10 js-scrollanim">
 									<span class="hidden-box d-block">
 										<span class="subhead-xxs text-color-red anim-slide">Photoshoot</span>
 									</span>
 									<h3 class="hidden-box">
-										<span class="headline-xxxs text-color-black anim-slide tr-delay-02">Black eyes</span>
+										<span class="headline-xxxs text-color-black anim-slide tr-delay-02">CRBRS</span>
 									</h3>
 								</div>
 							</a>
@@ -538,159 +669,56 @@
 							<!-- swiper-wrapper start -->
 							<div class="swiper-wrapper">
 								<!-- swiper-slide start -->
-								<div class="swiper-slide text-center">
-									<img class="client-logo" src="assets/images/clients/chayhana.png" alt="clients logo">
-								</div><!-- swiper-slide end -->
+								{{-- <div class="swiper-slide text-center">
+									<img class="client-logo" src="assets/images/loghi/Spotimedia.png" alt="spotimedia">
+                                </div> --}}
+                                <!-- swiper-slide end -->
+
+								<!-- swiper-slide start -->
+								{{-- <div class="swiper-slide text-center">
+									<img class="client-logo" src="assets/images/loghi/Liberoshopping.png" alt="liberoshopping">
+                                </div> --}}
+                                <!-- swiper-slide end -->
 
 								<!-- swiper-slide start -->
 								<div class="swiper-slide text-center">
-									<img class="client-logo" src="assets/images/clients/dongolok.png" alt="clients logo">
+									<img class="client-logo" src="assets/images/loghi/Oltremare.png" alt="oltremare">
 								</div><!-- swiper-slide end -->
 
 								<!-- swiper-slide start -->
-								<div class="swiper-slide text-center">
-									<img class="client-logo" src="assets/images/clients/eptep-septep.png" alt="clients logo">
-								</div><!-- swiper-slide end -->
+								{{-- <div class="swiper-slide text-center">
+									<img class="client-logo" src="assets/images/loghi/Bazaria.png" alt="bazaria">
+                                </div> --}}
+                                <!-- swiper-slide end -->
 
 								<!-- swiper-slide start -->
 								<div class="swiper-slide text-center">
-									<img class="client-logo" src="assets/images/clients/guldoyjan.png" alt="clients logo">
+									<img class="client-logo" src="assets/images/loghi/Mod_à.png" alt="moda">
 								</div><!-- swiper-slide end -->
 
 								<!-- swiper-slide start -->
-								<div class="swiper-slide text-center">
-									<img class="client-logo" src="assets/images/clients/jorgo.png" alt="clients logo">
-								</div><!-- swiper-slide end -->
+								{{-- <div class="swiper-slide text-center">
+									<img class="client-logo" src="assets/images/loghi/Shiibui.png" alt="shiibui">
+                                </div> --}}
+                                <!-- swiper-slide end -->
 
 								<!-- swiper-slide start -->
 								<div class="swiper-slide text-center">
-									<img class="client-logo" src="assets/images/clients/judoboy.png" alt="clients logo">
-								</div><!-- swiper-slide end -->
+									<img class="client-logo" src="assets/images/loghi/Velisti.png" alt="Vif">
+                                </div>
+                                <!-- swiper-slide end -->
 
 								<!-- swiper-slide start -->
 								<div class="swiper-slide text-center">
-									<img class="client-logo" src="assets/images/clients/kizil-jindi.png" alt="clients logo">
+									<img class="client-logo" src="assets/images/loghi/Ademia.png" alt="ademia">
 								</div><!-- swiper-slide end -->
 
-								<!-- swiper-slide start -->
-								<div class="swiper-slide text-center">
-									<img class="client-logo" src="assets/images/clients/meyman.png" alt="clients logo">
-								</div><!-- swiper-slide end -->
 
-								<!-- swiper-slide start -->
-								<div class="swiper-slide text-center">
-									<img class="client-logo" src="assets/images/clients/olchobay.png" alt="clients logo">
-								</div><!-- swiper-slide end -->
 							</div><!-- swiper-wrapper end -->
                         </div><!-- js-infinite-slider end -->
 
 
-						<!-- clients-lines start -->
-						{{-- <div class="clients-lines padding-top-90">
-							<!-- clients-lines__column start -->
-							<div class="clients-lines__column">
-								<div class="clients-lines__inner hover-box pos-rel">
-									<img class="client-logo client-hover-out pos-abs pos-center-center" src="assets/images/clients/balancha.png" alt="clients logo">
-									<img class="client-logo client-hover-in pos-abs pos-center-center" src="assets/images/clients/balancha-red.png" alt="clients logo">
-								</div>
-							</div><!-- clients-lines__column end -->
 
-							<!-- clients-lines__column start -->
-							<div class="clients-lines__column">
-								<div class="clients-lines__inner hover-box pos-rel">
-									<img class="client-logo client-hover-out pos-abs pos-center-center" src="assets/images/clients/jorgo.png" alt="clients logo">
-									<img class="client-logo client-hover-in pos-abs pos-center-center" src="assets/images/clients/jorgo-red.png" alt="clients logo">
-								</div>
-							</div><!-- clients-lines__column end -->
-
-							<!-- clients-lines__column start -->
-							<div class="clients-lines__column">
-								<div class="clients-lines__inner hover-box pos-rel">
-									<img class="client-logo client-hover-out pos-abs pos-center-center" src="assets/images/clients/judoboy.png" alt="clients logo">
-									<img class="client-logo client-hover-in pos-abs pos-center-center" src="assets/images/clients/judoboy-red.png" alt="clients logo">
-								</div>
-							</div><!-- clients-lines__column end -->
-
-							<!-- clients-lines__column start -->
-							<div class="clients-lines__column">
-								<div class="clients-lines__inner hover-box pos-rel">
-									<img class="client-logo client-hover-out pos-abs pos-center-center" src="assets/images/clients/kizil-jindi.png" alt="clients logo">
-									<img class="client-logo client-hover-in pos-abs pos-center-center" src="assets/images/clients/kizil-jindi-red.png" alt="clients logo">
-								</div>
-							</div><!-- clients-lines__column end -->
-
-							<!-- clients-lines__column start -->
-							<div class="clients-lines__column">
-								<div class="clients-lines__inner hover-box pos-rel">
-									<img class="client-logo client-hover-out pos-abs pos-center-center" src="assets/images/clients/meyman.png" alt="clients logo">
-									<img class="client-logo client-hover-in pos-abs pos-center-center" src="assets/images/clients/meyman-red.png" alt="clients logo">
-								</div>
-							</div><!-- clients-lines__column end -->
-
-							<!-- clients-lines__column start -->
-							<div class="clients-lines__column">
-								<div class="clients-lines__inner hover-box pos-rel">
-									<img class="client-logo client-hover-out pos-abs pos-center-center" src="assets/images/clients/olchobay.png" alt="clients logo">
-									<img class="client-logo client-hover-in pos-abs pos-center-center" src="assets/images/clients/olchobay-red.png" alt="clients logo">
-								</div>
-							</div><!-- clients-lines__column end -->
-
-							<!-- clients-lines__column start -->
-							<div class="clients-lines__column">
-								<div class="clients-lines__inner hover-box pos-rel">
-									<img class="client-logo client-hover-out pos-abs pos-center-center" src="assets/images/clients/tamaktan.png" alt="clients logo">
-									<img class="client-logo client-hover-in pos-abs pos-center-center" src="assets/images/clients/tamaktan-red.png" alt="clients logo">
-								</div>
-							</div><!-- clients-lines__column end -->
-
-							<!-- clients-lines__column start -->
-							<div class="clients-lines__column">
-								<div class="clients-lines__inner hover-box pos-rel">
-									<img class="client-logo client-hover-out pos-abs pos-center-center" src="assets/images/clients/chayhana.png" alt="clients logo">
-									<img class="client-logo client-hover-in pos-abs pos-center-center" src="assets/images/clients/chayhana-red.png" alt="clients logo">
-								</div>
-							</div><!-- clients-lines__column end -->
-
-							<!-- clients-lines__column start -->
-							<div class="clients-lines__column">
-								<div class="clients-lines__inner hover-box pos-rel">
-									<img class="client-logo client-hover-out pos-abs pos-center-center" src="assets/images/clients/dongolok.png" alt="clients logo">
-									<img class="client-logo client-hover-in pos-abs pos-center-center" src="assets/images/clients/dongolok-red.png" alt="clients logo">
-								</div>
-							</div><!-- clients-lines__column end -->
-
-							<!-- clients-lines__column start -->
-							<div class="clients-lines__column">
-								<div class="clients-lines__inner hover-box pos-rel">
-									<img class="client-logo client-hover-out pos-abs pos-center-center" src="assets/images/clients/eptep-septep.png" alt="clients logo">
-									<img class="client-logo client-hover-in pos-abs pos-center-center" src="assets/images/clients/eptep-septep-red.png" alt="clients logo">
-								</div>
-							</div><!-- clients-lines__column end -->
-
-							<!-- clients-lines__column start -->
-							<div class="clients-lines__column">
-								<div class="clients-lines__inner hover-box pos-rel">
-									<img class="client-logo client-hover-out pos-abs pos-center-center" src="assets/images/clients/guldoyjan.png" alt="clients logo">
-									<img class="client-logo client-hover-in pos-abs pos-center-center" src="assets/images/clients/guldoyjan-red.png" alt="clients logo">
-								</div>
-							</div><!-- clients-lines__column end -->
-
-							<!-- clients-lines__column start -->
-							<a href="#" class="clients-lines__column js-pointer-large">
-								<div class="clients-lines__inner hover-box pos-rel js-scrollanim">
-									<div class="padding-left-right-20 subhead-xxs text-center pos-abs pos-center-center">
-										<span class="anim-text-double-fill" data-text="This spot">This spot</span><br>
-										<span class="anim-text-double-fill tr-delay-02" data-text="awaits">awaits</span><br>
-										<span class="anim-text-double-fill tr-delay-04" data-text="You">You</span>
-									</div>
-								<div class="border-left-anim in-10px red"></div>
-								<div class="border-top-anim in-10px red"></div>
-								<div class="border-right-anim in-10px red"></div>
-								<div class="border-bottom-anim in-10px red"></div>
-								</div>
-							</a><!-- clients-lines__column end -->
-                        </div> --}}
-                        <!-- clients-lines end -->
 					</div><!-- container end -->
 				</div><!-- pos-rel end -->
             </section>
@@ -707,6 +735,26 @@
 @push('script')
 <script src="assets/js/typewriter.js"></script>
 <script src="assets/js/typewriter_init.js"></script>
+
+<script src="assets/js/three.r119.min.js"></script>
+<script src="assets/js/vanta.cells.min.js"></script>
+<script>
+VANTA.CELLS({
+  el: "#up",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  color1: 0x21eded,
+  color2: 0x1d88c3,
+  size: 2.70,
+  speed: 3.30
+})
+</script>
+
+{{--
 <script src="assets/js/jquery.ripples-min.js"></script>
 <script>
     $(document).ready(function() {
@@ -746,10 +794,10 @@
             var x = Math.random() * $el.outerWidth();
             var y = Math.random() * $el.outerHeight();
             var dropRadius = 20;
-            var strength = 0.04 + Math.random() * 0.04;
+            var strength = 0.01 + Math.random() * 0.01;
 
             $el.ripples('drop', x, y, dropRadius, strength);
         }, 400);
     });
-</script>
+</script> --}}
 @endpush

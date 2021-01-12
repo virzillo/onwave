@@ -23,6 +23,13 @@ class PagesController extends Controller
         return view('pages.about-us',compact('title'));
     }
 
+    public function portfolio()
+    {
+        $title='Portfolio';
+        return view('pages.portfolio',compact('title'));
+    }
+
+
     public function filtrisocial()
     {
         $title='Filtri Social';

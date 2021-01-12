@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/','PagesController@index')->name('home');
 Route::get('about-us','PagesController@about')->name('about');
+Route::get('portfolio','PagesController@portfolio')->name('portfolio');
+
 Route::get('filtri-social','PagesController@filtrisocial')->name('filtri.social');
 Route::get('contatti','PagesController@contatti')->name('contatti');
 
