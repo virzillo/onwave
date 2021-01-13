@@ -2,132 +2,11 @@
 
 @section('content')
 @push('style')
-	{{-- <style>
 
-canvas {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-}
-	</style>
-@endpush
-@push('script')
-	<script>
-		const canvas = document.querySelector("canvas");
-const context = canvas.getContext("2d");
 
-const lines = [];
-
-const colors = [
-  ["#4f3a4b", "#e55256"],
-//   ["#fff", "#111"],
-  ["#e37169", "#26282a"],
-  ["#eed87b", "#28292b"],
-  ["#0d5b5c", "#e6e6e6"],
-  ["#d4e8e1", "#e24c68"],
-  ["#fbfc65", "#1666bd"],
-  ["#f3c8ed", "#1790d0"],
-  ["#111", "#fff"]
-];
-
-var colorIndex = -1;
-
-var step = 0,
-  width = 0,
-  height = 0;
-
-document.ontouchstart = color;
-document.onmousedown = color;
-window.onresize = setup;
-
-setup();
-color();
-update();
-
-function setup() {
-  (width = window.innerWidth), (height = window.innerHeight);
-
-  lines.length = 0;
-
-  let lineCount = height / 26;
-  let pointCount = 14;
-  let spacingH = width / pointCount;
-  let spacingV = height / lineCount;
-
-  for (let v = 0; v < lineCount; v++) {
-    let line = { points: [], ran: 0.2 + Math.random() * 0.7 };
-
-    for (let h = 0; h < pointCount; h++) {
-      line.points.push({
-        nx: h * spacingH,
-        ny: v * spacingV
-      });
-    }
-
-    line.points.push({
-      nx: width + spacingH,
-      ny: v * spacingV
-    });
-
-    lines.push(line);
-  }
-}
-
-function color() {
-  colorIndex = ++colorIndex % colors.length;
-  canvas.style.backgroundColor = colors[colorIndex][0];
-}
-
-function update() {
-  step += 0.8;
-
-  canvas.width = width;
-  canvas.height = height;
-
-  context.clearRect(0, 0, width, height);
-
-  context.lineWidth = 2;
-  context.strokeStyle = colors[colorIndex][1];
-  context.fillStyle = colors[colorIndex][0];
-
-  lines.forEach((line, v) => {
-    context.beginPath();
-
-    line.points.forEach((point, h) => {
-      (point.x = point.nx),
-        (point.y =
-          point.ny +
-          Math.sin((point.x * line.ran + (step + point.ny)) / 40) *
-            (6 + (point.ny / height) * 34));
-    });
-
-    line.points.forEach((point, h) => {
-      let nextPoint = line.points[h + 1];
-
-      if (h === 0) {
-        context.moveTo(point.x, point.y);
-      } else if (nextPoint) {
-        let cpx = point.x + (nextPoint.x - point.x) / 2;
-        let cpy = point.y + (nextPoint.y - point.y) / 2;
-        context.quadraticCurveTo(point.x, point.y, cpx, cpy);
-      }
-    });
-
-    context.stroke();
-
-    context.lineTo(width, height);
-    context.lineTo(0, height);
-    context.closePath();
-    context.fill();
-  });
-
-  requestAnimationFrame(update);
-}
-
-</script> --}}
 @endpush
 <main class="js-animsition-overlay" data-animsition-overlay="true">
-{{-- <canvas></canvas> --}}
+
 
     <section id="up" class="pos-rel bg-img-cover" style="background-image:url(assets/images/sfondi/sfondo-colorato.jpg); ">
         <!-- bg-overlay -->
@@ -148,130 +27,6 @@ function update() {
 
 	</section>
 
-    <!-- home slider start -->
-			{{-- <section id="up" class="pos-rel section-bg-dark-1 js-home-slider fullscreen-slider">
-				<!-- swiper-wrapper start -->
-				<div class="swiper-wrapper">
-					<!-- swiper-slide start -->
-					<div class="swiper-slide">
-						<!-- slide-bg -->
-						<div class="js-parallax-slide-bg bg-img-cover" style="background-image:url(assets/images/sfondi/digitalgun.jpg)"></div>
-						<!-- bg-overlay -->
-						<div class="bg-overlay-black"></div>
-
-						<!-- content start -->
-						<div class="flex-min-height-100vh pos-rel" data-swiper-parallax-x="30%">
-							<div class="container small padding-top-bottom-120">
-								<h2 class="headline-xl">
-									<span class="hidden-box d-block">
-										<span class="anim-slide tr-delay-02">Diamo luce</span>
-									</span>
-									<span class="hidden-box d-block">
-										<span class="anim-slide tr-delay-03">a creatività</span>
-									</span>
-									<span class="hidden-box d-block">
-										<span class="anim-slide tr-delay-04">e innovazione</span>
-									</span>
-								</h2>
-								<div class="margin-top-30 anim-fade tr-delay-08">
-									<a href="#" class="border-btn js-pointer-large">
-										<span class="border-btn__inner">Scopri di più</span>
-										<span class="border-btn__lines-1"></span>
-										<span class="border-btn__lines-2"></span>
-									</a>
-								</div>
-							</div>
-						</div><!-- content end -->
-					</div><!-- swiper-slide end -->
-
-					<!-- swiper-slide start -->
-					<div class="swiper-slide">
-						<!-- slide-bg -->
-						<div class="js-parallax-slide-bg bg-img-cover" style="background-image:url(assets/images/sfondi/rainbow.jpg)"></div>
-						<!-- bg-overlay -->
-						<div class="bg-overlay-black"></div>
-
-						<!-- content start -->
-						<div class="flex-min-height-100vh pos-rel" data-swiper-parallax-x="30%">
-							<div class="container small text-center padding-top-bottom-120">
-								<h2 class="headline-xl">
-									<span class="hidden-box d-block">
-										<span class="anim-slide tr-delay-02">We’r Provided</span>
-									</span>
-									<span class="hidden-box d-block">
-										<span class="anim-slide tr-delay-03">
-											<span class="text-color-red">Best</span> Digital
-										</span>
-									</span>
-									<span class="hidden-box d-block">
-										<span class="anim-slide tr-delay-04 text-color-red">Services</span>
-									</span>
-								</h2>
-								<div class="margin-top-30 anim-fade tr-delay-08">
-									<a href="#" class="border-btn js-pointer-large">
-										<span class="border-btn__inner">Read more</span>
-										<span class="border-btn__lines-1"></span>
-										<span class="border-btn__lines-2"></span>
-									</a>
-								</div>
-							</div>
-						</div><!-- content end -->
-					</div><!-- swiper-slide end -->
-
-					<!-- swiper-slide start -->
-					<div class="swiper-slide">
-						<!-- slide-bg -->
-						<div class="js-parallax-slide-bg bg-img-cover" style="background-image:url(assets/images/sfondi/reddot.jpg)"></div>
-						<!-- bg-overlay -->
-						<div class="bg-overlay-black"></div>
-
-						<!-- content start -->
-						<div class="flex-min-height-100vh pos-rel" data-swiper-parallax-x="30%">
-							<div class="container small padding-top-bottom-120">
-								<h2 class="headline-xl">
-									<span class="hidden-box d-block">
-										<span class="anim-slide tr-delay-02">Best Solutions</span>
-									</span>
-									<span class="hidden-box d-block">
-										<span class="anim-slide tr-delay-03">& Ideas for</span>
-									</span>
-									<span class="hidden-box d-block">
-										<span class="anim-slide tr-delay-04">Your Business</span>
-									</span>
-								</h2>
-								<div class="margin-top-30 anim-fade tr-delay-08">
-									<a href="#" class="border-btn js-pointer-large">
-										<span class="border-btn__inner">Read more</span>
-										<span class="border-btn__lines-1"></span>
-										<span class="border-btn__lines-2"></span>
-									</a>
-								</div>
-							</div>
-						</div><!-- content end -->
-					</div><!-- swiper-slide end -->
-				</div><!-- swiper-wrapper end -->
-
-				<!-- swiper-button-prev start -->
-				<div class="swiper-button-prev-box fullscreen-slider-arrow after-preloader-anim">
-					<div class="anim-fade">
-						<div class="swiper-button-prev"></div>
-					</div>
-				</div><!-- swiper-button-prev end -->
-				<!-- swiper-button-next start -->
-				<div class="swiper-button-next-box fullscreen-slider-arrow after-preloader-anim">
-					<div class="anim-fade tr-delay-06">
-						<div class="swiper-button-next"></div>
-					</div>
-				</div><!-- swiper-button-next end -->
-
-				<!-- swiper-pagination start -->
-				<div class="pagination-box fullscreen-slider-pagination after-preloader-anim">
-					<div class="anim-fade tr-delay-03">
-						<div class="swiper-pagination counter-pagination"></div>
-					</div>
-                </div><!-- swiper-pagination end -->
-            </section> --}}
-            <!-- home slider end -->
 
             	<!-- about us start -->
 			<section id="down" class="pos-rel section-bg-dark-2">
@@ -486,15 +241,10 @@ function update() {
 			</section><!-- what we do end -->
 
             <!-- video content start -->
-            <div class="pos-rel bg-img-cover height-100vh" style="background-image:url(assets/images/projects/neon-lights/woman-wearing-beige-and-gray-hoodie-portrait-2272855.jpg)">
+            {{-- <div class="pos-rel bg-img-cover height-100vh" style="background-image:url(assets/images/projects/neon-lights/woman-wearing-beige-and-gray-hoodie-portrait-2272855.jpg)">
                 <video src="/assets/dj.mp4" class="video-bg" muted loop autoplay playsinline></video>
-				{{-- <div class="bg-overlay-black"></div> --}}
-				{{-- <div class="pos-rel height-100perc">
-					<a href="https://www.youtube.com/watch?v=hitNXU4PoRU" class="play-button js-popup-youtube js-pointer-large">
-						<span class="play-button__inner"></span>
-					</a>
-				</div> --}}
-            </div>
+
+            </div> --}}
             <!-- video content end -->
 
 
@@ -552,10 +302,27 @@ function update() {
 						</div><!-- grid-item end -->
 
                         <!-- grid-item start -->
+						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item marketing">
+							<a href="{{route('portfolio')}}" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
+								<div class="anim-img-scale anim-img-scale_hover js-img-scale">
+									<img class="anim-img-scale__inner" src="assets/images/portfolio/portfolio2.jpg" alt="project">
+								</div>
+								<div class="margin-top-10 js-scrollanim">
+									<span class="hidden-box d-block">
+										<span class="subhead-xxs text-color-red anim-slide">Marketing</span>
+									</span>
+									<h3 class="hidden-box">
+										<span class="headline-xxxs text-color-black anim-slide tr-delay-02">Drone</span>
+									</h3>
+								</div>
+							</a>
+                        </div><!-- grid-item end -->
+
+                        <!-- grid-item start -->
 						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item website">
 							<a href="{{route('portfolio')}}" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
 								<div class="anim-img-scale anim-img-scale_hover js-img-scale">
-									<img class="anim-img-scale__inner" src="assets/images/projects/the-ordinary/the-ordinary-product-line-3685530.jpg" alt="project">
+									<img class="anim-img-scale__inner" src="assets/images/portfolio/portfolio1.jpg" alt="project">
 								</div>
 								<div class="margin-top-10 js-scrollanim">
 									<span class="hidden-box d-block">
@@ -568,28 +335,13 @@ function update() {
 							</a>
                         </div><!-- grid-item end -->
 
-						<!-- grid-item start -->
-						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item marketing">
-							<a href="{{route('portfolio')}}" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
-								<div class="anim-img-scale anim-img-scale_hover js-img-scale">
-									<img class="anim-img-scale__inner" src="assets/images/projects/drone/quadcopter-on-wooden-surface-1601217.jpg" alt="project">
-								</div>
-								<div class="margin-top-10 js-scrollanim">
-									<span class="hidden-box d-block">
-										<span class="subhead-xxs text-color-red anim-slide">Marketing</span>
-									</span>
-									<h3 class="hidden-box">
-										<span class="headline-xxxs text-color-black anim-slide tr-delay-02">Drone</span>
-									</h3>
-								</div>
-							</a>
-						</div><!-- grid-item end -->
+
 
 						<!-- grid-item start -->
 						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item marketing">
 							<a href="{{route('portfolio')}}" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
 								<div class="anim-img-scale anim-img-scale_hover js-img-scale">
-									<img class="anim-img-scale__inner" src="assets/images/projects/blue-ridge/flat-lay-photography-of-several-product-bottles-on-withered-1667071.jpg" alt="project">
+									<img class="anim-img-scale__inner" src="assets/images/portfolio/portfolio3.jpg" alt="project">
 								</div>
 								<div class="margin-top-10 js-scrollanim">
 									<span class="hidden-box d-block">
@@ -606,7 +358,7 @@ function update() {
 						<div class="padding-top-60 grid-item-33-50-100 js-isotope-filter-grid-item photoshoot" >
 							<a href="{{route('portfolio')}}" class="grid-margin-box hover-box js-animsition-link js-pointer-large">
 								<div class="anim-img-scale anim-img-scale_hover js-img-scale">
-									<img class="anim-img-scale__inner" src="assets/images/Urban_ring_1.jpg" alt="Urban Ring">
+									<img class="anim-img-scale__inner" src="assets/images/portfolio/portfolio4.jpg" alt="Urban Ring">
 								</div>
 								<div class="margin-top-10 js-scrollanim">
 									<span class="hidden-box d-block">
