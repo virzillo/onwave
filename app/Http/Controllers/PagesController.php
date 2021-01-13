@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendMail;
 class PagesController extends Controller
 {
     /**
@@ -42,11 +43,27 @@ class PagesController extends Controller
         return view('pages.contatti',compact('title'));
     }
 
-    public function inviomail()
+    public function inviomail(Request $request)
     {
-        $title='Invio Mail';
-        return view('pages.contatti',compact('title'));
+        $this->validate($request, [
+            'nome'     =>  'required',
+            'cognome'     =>  'required',
+            'email'  =>  'required|email',
+            'messaggio' =>  'required',
+            'g-recaptcha-response' => 'required|captcha'
+           ]);
+
+              $data = array(
+                  'nome'      =>  $request->nome,
+                  'cognome'      =>  $request->nome,
+                  'email'      =>  $request->email,
+                  'messaggio'   =>   $request->messaggio
+              );
+
+           Mail::to('riccardo.virgilio@gmail.com')->send(new SendMail($data));
+           return back()->with('success', 'Thanks for contacting us!');
     }
+
 
     /**
      * Show the form for creating a new resource.

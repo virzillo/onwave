@@ -138,8 +138,9 @@
             <div class="container small padding-top-bottom-120 form-box text-color-black">
                 <h4 class="headline-xxs text-center">Lets Get In Touch!</h4>
                 <!-- flex-container start -->
-                <form action="{{route('inviomail')}}" method="post" name="formobrsv" id="send_form" class="flex-container padding-top-90">
+                <form action="{{route('inviomail')}}" method="post" name="formobrsv" id="xsend_form" class="flex-container padding-top-90">
                     @csrf
+                    {{-- @captcha('it') --}}
                     <!-- column start -->
                     <div class="four-columns">
                         <div class="column-r-margin-10">
@@ -164,7 +165,8 @@
                     </div><!-- column end -->
                     <!-- column start -->
                     <div class="twelve-columns text-center padding-top-90">
-                        <button name="submit" id="send" class="border-btn js-pointer-large text-color-black">
+
+                        <button type="submit" name="submit" id="send" class="border-btn js-pointer-large text-color-black">
                             <span class="border-btn__inner">invia</span>
                             <span class="btn-wait">Wait</span>
                             <span class="border-btn__lines-1"></span>
